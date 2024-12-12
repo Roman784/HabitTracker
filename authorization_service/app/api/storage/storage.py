@@ -12,7 +12,7 @@ DATABASE_URL = getenv('DB_PATH')
 
 
 engine = create_async_engine(f'sqlite+aiosqlite:///{DATABASE_URL}')
-new_session = async_sessionmaker(bind=engine, expire_on_commit=False)
+db_session = async_sessionmaker(bind=engine, expire_on_commit=False)
 
 
 class BaseTable(DeclarativeBase):
@@ -22,8 +22,8 @@ class BaseTable(DeclarativeBase):
 class UserTable(BaseTable):
     '''Таблица пользователя'''
     __tablename__ = 'users'
-    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    username: Mapped[str]
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True, unique=True)
+    username: Mapped[str] = mapped_column(unique=True)
     password: Mapped[str]
 
 
