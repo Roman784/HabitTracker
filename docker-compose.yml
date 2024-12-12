@@ -1,0 +1,43 @@
+services:
+  1_service:
+    build:
+      context: .
+      dockerfile: ./1_service/Dockerfile
+    command: uvicorn main:app --host 0.0.0.0 --reload
+    volumes:
+      - ./1_service:/app
+    ports:
+      - 8000:8000
+    environment:
+      - SERVICE_2_URL=http://2_service:8000
+      - SERVICE_3_URL=http://3_service:8000
+      - REDIS_HOST=redis
+  
+  2_service:
+    build:
+      context: .
+      dockerfile: ./2_service/Dockerfile
+    command: uvicorn main:app --host 0.0.0.0 --reload
+    volumes:
+      - ./2_service:/app
+    ports:
+      - 8002:8000
+    environment:
+      - REDIS_HOST=redis
+  
+  3_service:
+    build:
+      context: .
+      dockerfile: ./3_service/Dockerfile
+    command: uvicorn main:app --host 0.0.0.0 --reload
+    volumes:
+      - ./3_service:/app
+    ports:
+      - 8003:8000
+    environment:
+      - REDIS_HOST=redis
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - 6379:6379
