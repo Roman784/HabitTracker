@@ -13,7 +13,6 @@ from ...schemas.user_schema import User
 
 
 load_dotenv()
-DATABASE_URL = getenv('DB_PATH')
 LOGS_FILE_NAME = getenv('REPOSITORY_LOGS_FILE')
 
 logging.basicConfig(
