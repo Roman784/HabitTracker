@@ -10,6 +10,7 @@ from ...schemas.user_schema import User
 
 
 class UserRepository:
+    '''Методы для работы с бд пользователей'''
     @classmethod
     async def get_one(cls, user_id: int) -> UserModel:
         '''Возвращает пользователя'''
@@ -22,7 +23,6 @@ class UserRepository:
             except NoResultFound as e:
                 raise HTTPException(status_code=404, detail="User not found") from e
 
-    '''Методы для работы с бд пользователей'''
     @classmethod
     async def create(cls, data: User) -> UserModel:
         '''Добавляет пользователя'''
@@ -48,8 +48,11 @@ class UserRepository:
                 update(UserModel)
                 .where(UserModel.id == user_id)
                 .values(**data.model_dump(exclude_unset=True)))
-            await session.execute(query)
+            result = await session.execute(query)
             await session.commit()
+
+            if result.rowcount == 0:
+                raise HTTPException(status_code=404, detail="User not found")
 
     @classmethod
     async def delete(cls, user_id: int):
