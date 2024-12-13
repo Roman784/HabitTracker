@@ -2,9 +2,9 @@
 
 
 from contextlib import asynccontextmanager
-from typing import Annotated, Tuple
+from typing import Annotated
 from fastapi import FastAPI, Depends, status
-from .schemas.user_schema import User
+from .schemas.user_schema import User, UserResponse, UserCreateResponse
 from .storage.repositories.user_repository import UserRepository
 from .storage.database import create_tables, delete_tables
 
@@ -20,15 +20,17 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 
-@app.post('/create')
-async def create(user_data: Annotated[User, Depends()]):
-    await UserRepository.create(user_data)
-
-@app.get('/get-one', response_model=Tuple[int, User], status_code=status.HTTP_200_OK)
-async def get(user_id: int):
-    '''Возвращает пользователя в виде кортежа (id, data)'''
+@app.get('/get-one', status_code=status.HTTP_200_OK)
+async def get(user_id: int) -> UserResponse:
+    '''Возвращает данные пользователя'''
     user = await UserRepository.get_one(user_id)
-    return (user.id, user)
+    return user
+
+@app.post('/create', status_code=status.HTTP_201_CREATED)
+async def create(user_data: Annotated[User, Depends()]) -> UserCreateResponse:
+    '''Создаёт пользователя'''
+    user = await UserRepository.create(user_data)
+    return {"message": "User created", "user_id": user.id}
 
 @app.put('/update')
 async def update(user_id: int, user_data: Annotated[User, Depends()]):

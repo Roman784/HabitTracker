@@ -31,10 +31,14 @@ class UserRepository:
                 username=data.username,
                 password=data.password
             )
-            session.add(user)
-            await session.flush()
-            await session.commit()
-            return user
+            try:
+                session.add(user)
+                await session.flush()
+                await session.commit()
+                return user
+            except IntegrityError as e:
+                await session.rollback()
+                raise HTTPException(status_code=400, detail="User already exists") from e
 
     @classmethod
     async def update(cls, user_id: int, data: User):
