@@ -1,10 +1,10 @@
-'''Модели'''
+'''Схема пользователя'''
 
 
 from pydantic import BaseModel
 
 
 class User(BaseModel):
-    '''Модель пользователя'''
+    '''Схема пользователя'''
     username: str
     password: str

@@ -2,10 +2,11 @@
 
 
 from contextlib import asynccontextmanager
-from fastapi import FastAPI
-from app.api.storage.storage import UserTable, create_tables, delete_tables
-from app.api.storage.repository import UserRepository
-from app.api.storage.models import User
+from typing import Annotated, Tuple
+from fastapi import FastAPI, Depends
+from .schemas.user_schema import User
+from .storage.repositories.user_repository import UserRepository
+from .storage.database import create_tables, delete_tables
 
 
 @asynccontextmanager
@@ -20,16 +21,16 @@ app = FastAPI(lifespan=lifespan)
 
 
 @app.post('/create')
-async def create(user_data: User):
+async def create(user_data: Annotated[User, Depends()]):
     await UserRepository.create(user_data)
 
-@app.get('/read')
+@app.get('/read', response_model=Tuple[int, User])
 async def get(user_id: int):
     user = await UserRepository.read(user_id)
-    return user
+    return (user.id, user)
 
 @app.put('/update')
-async def update(user_id: int, user_data: User):
+async def update(user_id: int, user_data: Annotated[User, Depends()]):
     await UserRepository.update(user_id, user_data)
 
 @app.delete('/delete')
