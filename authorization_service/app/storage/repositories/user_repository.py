@@ -1,25 +1,16 @@
 '''Функции для работы с бд'''
 
 
-import logging
-from os import getenv
-from dotenv import load_dotenv
 from sqlalchemy import select, update, delete
 from sqlalchemy.exc import NoResultFound, IntegrityError
 from fastapi import HTTPException
 from ..database import db_session
 from ..models.user_model import UserModel
 from ...schemas.user_schema import User
+from ...logging.logger import get_user_repository_logger
 
 
-load_dotenv()
-LOGS_FILE_NAME = getenv('REPOSITORY_LOGS_FILE')
-
-logging.basicConfig(
-    filename=LOGS_FILE_NAME,
-    format='%(asctime)s %(name)s %(levelname)s %(message)s',
-    level=logging.DEBUG)
-logger = logging.getLogger('user_repository')
+logger = get_user_repository_logger()
 
 
 class UserRepository:
