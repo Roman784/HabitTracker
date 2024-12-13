@@ -3,7 +3,7 @@
 
 from contextlib import asynccontextmanager
 from typing import Annotated, Tuple
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, status
 from .schemas.user_schema import User
 from .storage.repositories.user_repository import UserRepository
 from .storage.database import create_tables, delete_tables
@@ -24,9 +24,10 @@ app = FastAPI(lifespan=lifespan)
 async def create(user_data: Annotated[User, Depends()]):
     await UserRepository.create(user_data)
 
-@app.get('/read', response_model=Tuple[int, User])
+@app.get('/get-one', response_model=Tuple[int, User], status_code=status.HTTP_200_OK)
 async def get(user_id: int):
-    user = await UserRepository.read(user_id)
+    '''Возвращает пользователя в виде кортежа (id, data)'''
+    user = await UserRepository.get_one(user_id)
     return (user.id, user)
 
 @app.put('/update')
