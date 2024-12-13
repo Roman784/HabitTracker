@@ -13,7 +13,7 @@ class UserResponse(User):
     '''Схема пользователя для выдачи'''
     id: int
 
-class UserOperationResponse(BaseModel):
-    '''Схема ответа при работе с пользователем'''
+class UserCreateResponse(BaseModel):
+    '''Схема ответа при создании пользователя'''
     message: str
     user_id: int

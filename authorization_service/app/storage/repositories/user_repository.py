@@ -47,7 +47,7 @@ class UserRepository:
             query = (
                 update(UserModel)
                 .where(UserModel.id == user_id)
-                .values(**data.model_dump(exclude_unset=True)))
+                .values(username=data.username, password=data.password))
             result = await session.execute(query)
             await session.commit()
 
@@ -59,5 +59,8 @@ class UserRepository:
         '''Удаляет пользователя'''
         async with db_session() as session:
             query = delete(UserModel).where(UserModel.id == user_id)
-            await session.execute(query)
+            result = await session.execute(query)
             await session.commit()
+
+            if result.rowcount == 0:
+                raise HTTPException(status_code=404, detail="User not found")
