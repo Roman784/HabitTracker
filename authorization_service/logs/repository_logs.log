@@ -16,3 +16,65 @@
 2024-12-14 09:24:09,779 user_repository INFO User id: 1 successfully created
 2024-12-14 09:24:09,779 user_repository INFO User id: 1 successfully created
 2024-12-14 09:24:09,779 user_repository INFO User id: 1 successfully created
+2024-12-14 10:04:42,490 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:04:42,490 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:04:42,496 user_repository WARNING User id: 1 not found
+2024-12-14 10:04:42,496 user_repository WARNING User id: 1 not found
+2024-12-14 10:04:45,752 user_repository INFO Creating new user, name: roman
+2024-12-14 10:04:45,752 user_repository INFO Creating new user, name: roman
+2024-12-14 10:04:45,752 user_repository DEBUG Password hashing
+2024-12-14 10:04:45,752 user_repository DEBUG Password hashing
+2024-12-14 10:04:59,437 user_repository INFO Creating new user, name: roman
+2024-12-14 10:04:59,437 user_repository INFO Creating new user, name: roman
+2024-12-14 10:04:59,437 user_repository DEBUG Password hashing
+2024-12-14 10:04:59,437 user_repository DEBUG Password hashing
+2024-12-14 10:04:59,466 user_repository INFO User id: 1 successfully created
+2024-12-14 10:04:59,466 user_repository INFO User id: 1 successfully created
+2024-12-14 10:05:05,141 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:05:05,141 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:05:05,149 user_repository INFO User id: 1 successfully retrieved
+2024-12-14 10:05:05,149 user_repository INFO User id: 1 successfully retrieved
+2024-12-14 10:05:16,841 user_repository INFO Updating the user, id: 1
+2024-12-14 10:05:16,841 user_repository INFO Updating the user, id: 1
+2024-12-14 10:05:16,845 user_repository DEBUG Password hashing
+2024-12-14 10:05:16,845 user_repository DEBUG Password hashing
+2024-12-14 10:05:16,871 user_repository INFO User id: 1 successfully updated
+2024-12-14 10:05:16,871 user_repository INFO User id: 1 successfully updated
+2024-12-14 10:05:26,669 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:05:26,669 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:05:26,672 user_repository INFO User id: 1 successfully retrieved
+2024-12-14 10:05:26,672 user_repository INFO User id: 1 successfully retrieved
+2024-12-14 10:05:34,439 user_repository INFO Deleting the user, id: 22
+2024-12-14 10:05:34,439 user_repository INFO Deleting the user, id: 22
+2024-12-14 10:05:34,444 user_repository WARNING User id: 22 not found
+2024-12-14 10:05:34,444 user_repository WARNING User id: 22 not found
+2024-12-14 10:05:36,896 user_repository INFO Deleting the user, id: 1
+2024-12-14 10:05:36,896 user_repository INFO Deleting the user, id: 1
+2024-12-14 10:05:36,906 user_repository INFO User id: 1 successfully deleted
+2024-12-14 10:05:36,906 user_repository INFO User id: 1 successfully deleted
+2024-12-14 10:05:41,948 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:05:41,948 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:05:41,952 user_repository WARNING User id: 1 not found
+2024-12-14 10:05:41,952 user_repository WARNING User id: 1 not found
+2024-12-14 10:13:40,725 user_repository INFO Creating new user, name: roman
+2024-12-14 10:13:40,725 user_repository INFO Creating new user, name: roman
+2024-12-14 10:13:40,726 user_repository DEBUG Password hashing
+2024-12-14 10:13:40,726 user_repository DEBUG Password hashing
+2024-12-14 10:13:40,761 user_repository INFO User id: 1 successfully created
+2024-12-14 10:13:40,761 user_repository INFO User id: 1 successfully created
+2024-12-14 10:13:44,623 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:13:44,623 user_repository INFO Retrieving the user, id: 1
+2024-12-14 10:13:44,631 user_repository INFO User id: 1 successfully retrieved
+2024-12-14 10:13:44,631 user_repository INFO User id: 1 successfully retrieved
+2024-12-14 10:14:39,590 user_repository INFO Creating new user, name: roman
+2024-12-14 10:14:39,590 user_repository INFO Creating new user, name: roman
+2024-12-14 10:14:39,590 user_repository DEBUG Password hashing
+2024-12-14 10:14:39,590 user_repository DEBUG Password hashing
+2024-12-14 10:14:39,622 user_repository INFO User id: 1 successfully created
+2024-12-14 10:14:39,622 user_repository INFO User id: 1 successfully created
+2024-12-14 10:14:41,050 user_repository INFO Creating new user, name: roman
+2024-12-14 10:14:41,050 user_repository INFO Creating new user, name: roman
+2024-12-14 10:14:41,050 user_repository DEBUG Password hashing
+2024-12-14 10:14:41,050 user_repository DEBUG Password hashing
+2024-12-14 10:14:41,073 user_repository WARNING User name: roman already exists
+2024-12-14 10:14:41,073 user_repository WARNING User name: roman already exists

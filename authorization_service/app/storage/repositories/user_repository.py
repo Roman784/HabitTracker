@@ -1,8 +1,7 @@
 '''Функции для работы с бд'''
 
 
-from sqlalchemy import select, update, delete
-from sqlalchemy.exc import NoResultFound, IntegrityError
+from sqlalchemy import select
 from fastapi import HTTPException
 from ..database import db_session
 from ..models.user_model import UserModel
@@ -21,17 +20,14 @@ class UserRepository:
         '''Возвращает пользователя'''
         logger.info("Retrieving the user, id: %d", user_id)
         async with db_session() as session:
-            query = select(UserModel).where(UserModel.id == user_id)
-            try:
-                result = await session.execute(query)
-                user = result.scalar_one()
+            user = await session.get(UserModel, user_id)
 
-                logger.info("User id: %d successfully retrieved", user_id)
-                return user
-            except NoResultFound as e:
-
+            if user is None:
                 logger.warning("User id: %d not found", user_id)
-                raise HTTPException(status_code=404, detail="User not found") from e
+                raise HTTPException(status_code=404, detail="User not found")
+
+            logger.info("User id: %d successfully retrieved", user_id)
+            return user
 
     @staticmethod
     async def create(data: User) -> UserModel:
@@ -43,34 +39,36 @@ class UserRepository:
                 username=data.username,
                 password=hashed_password
             )
-            try:
-                session.add(user)
-                await session.flush()
-                await session.commit()
 
-                logger.info("User id: %d successfully created", user.id)
-                return user
-            except IntegrityError as e:
-                await session.rollback()
+            query = select(UserModel).where(UserModel.username == user.username)
+            result = await session.execute(query)
+            existing_user = result.one_or_none()
 
+            if existing_user:
                 logger.warning("User name: %s already exists", data.username)
-                raise HTTPException(status_code=400, detail="User already exists") from e
+                raise HTTPException(status_code=400, detail="User already exists")
+
+            session.add(user)
+            await session.flush()
+            await session.commit()
+
+            logger.info("User id: %d successfully created", user.id)
+            return user
 
     @staticmethod
     async def update(user_id: int, data: User):
         '''Обновляет данные пользователя'''
         logger.info("Updating the user, id: %d", user_id)
         async with db_session() as session:
-            query = (
-                update(UserModel)
-                .where(UserModel.id == user_id)
-                .values(username=data.username, password=data.password))
-            result = await session.execute(query)
-            await session.commit()
+            user = await session.get(UserModel, user_id)
 
-            if result.rowcount == 0:
+            if user is None:
                 logger.warning("User id: %d not found", user_id)
                 raise HTTPException(status_code=404, detail="User not found")
+
+            user.username = data.username
+            user.password = hash_password(data.password)
+            await session.commit()
 
             logger.info("User id: %d successfully updated", user_id)
 
@@ -79,12 +77,13 @@ class UserRepository:
         '''Удаляет пользователя'''
         logger.info("Deleting the user, id: %d", user_id)
         async with db_session() as session:
-            query = delete(UserModel).where(UserModel.id == user_id)
-            result = await session.execute(query)
-            await session.commit()
+            user = await session.get(UserModel, user_id)
 
-            if result.rowcount == 0:
+            if user is None:
                 logger.warning("User id: %d not found", user_id)
                 raise HTTPException(status_code=404, detail="User not found")
+
+            await session.delete(user)
+            await session.commit()
 
             logger.info("User id: %d successfully deleted", user_id)
