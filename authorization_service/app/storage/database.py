@@ -4,8 +4,8 @@
 from os import getenv
 from dotenv import load_dotenv
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
-from .models.base_model import BaseModel
-from ..logging.logger import get_database_logger
+from app.storage.models.base_model import BaseModel
+from app.logging.logger_factory import get_database_logger
 
 
 load_dotenv()

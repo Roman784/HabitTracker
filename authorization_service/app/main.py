@@ -4,10 +4,9 @@
 from contextlib import asynccontextmanager
 from typing import Annotated
 from fastapi import FastAPI, Depends, status
-from .schemas.user_schema import User, UserResponse, UserCreateResponse
-from .schemas.message_schema import MessageResponse
-from .storage.repositories.user_repository import UserRepository
-from .storage.database import create_tables, delete_tables
+from app.schemas.user_schema import User, UserResponse, UserCreateResponse
+from app.storage.repositories.user_repository import UserRepository
+from app.storage.database import create_tables, delete_tables
 
 
 @asynccontextmanager
@@ -34,13 +33,13 @@ async def create(user_data: Annotated[User, Depends()]) -> UserCreateResponse:
     return { "message": "User created", "user_id": user.id }
 
 @app.put('/update', status_code=status.HTTP_200_OK)
-async def update(user_id: int, user_data: Annotated[User, Depends()]) -> MessageResponse:
+async def update(user_id: int, user_data: Annotated[User, Depends()]):
     '''Обновляет данные пользователя'''
     await UserRepository.update(user_id, user_data)
     return { "message": "User updated" }
 
 @app.delete('/delete', status_code=status.HTTP_200_OK)
-async def delete(user_id: int) -> MessageResponse:
+async def delete(user_id: int):
     '''Удаляет пользователя'''
     await UserRepository.delete(user_id)
     return { "message": "User deleted" }

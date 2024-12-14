@@ -2,7 +2,7 @@
 
 
 from sqlalchemy.orm import Mapped, mapped_column
-from .base_model import BaseModel
+from app.storage.models.base_model import BaseModel
 
 
 class UserModel(BaseModel):

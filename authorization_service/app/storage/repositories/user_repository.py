@@ -3,11 +3,11 @@
 
 from sqlalchemy import select
 from fastapi import HTTPException
-from ..database import db_session
-from ..models.user_model import UserModel
-from ...schemas.user_schema import User
-from ...logging.logger import get_user_repository_logger
-from ...utils.password_hashing import hash_password, verify_password
+from app.storage.database import db_session
+from app.storage.models.user_model import UserModel
+from app.schemas.user_schema import User
+from app.logging.logger_factory import get_user_repository_logger
+from app.utils.password_hashing import hash_password
 
 
 logger = get_user_repository_logger()

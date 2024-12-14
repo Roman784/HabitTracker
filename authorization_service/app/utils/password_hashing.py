@@ -2,7 +2,7 @@
 
 
 from passlib.hash import pbkdf2_sha256
-from ..logging.logger import get_user_repository_logger
+from app.logging.logger_factory import get_user_repository_logger
 
 
 logger = get_user_repository_logger()
