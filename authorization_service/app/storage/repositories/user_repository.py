@@ -8,6 +8,7 @@ from ..database import db_session
 from ..models.user_model import UserModel
 from ...schemas.user_schema import User
 from ...logging.logger import get_user_repository_logger
+from ...utils.password_hashing import hash_password, verify_password
 
 
 logger = get_user_repository_logger()
@@ -15,8 +16,8 @@ logger = get_user_repository_logger()
 
 class UserRepository:
     '''Методы для работы с бд пользователей'''
-    @classmethod
-    async def get_one(cls, user_id: int) -> UserModel:
+    @staticmethod
+    async def get_one(user_id: int) -> UserModel:
         '''Возвращает пользователя'''
         logger.info("Retrieving the user, id: %d", user_id)
         async with db_session() as session:
@@ -32,14 +33,15 @@ class UserRepository:
                 logger.warning("User id: %d not found", user_id)
                 raise HTTPException(status_code=404, detail="User not found") from e
 
-    @classmethod
-    async def create(cls, data: User) -> UserModel:
+    @staticmethod
+    async def create(data: User) -> UserModel:
         '''Создаёт пользователя'''
         logger.info("Creating new user, name: %s", data.username)
         async with db_session() as session:
+            hashed_password = hash_password(data.password)
             user = UserModel(
                 username=data.username,
-                password=data.password
+                password=hashed_password
             )
             try:
                 session.add(user)
@@ -54,8 +56,8 @@ class UserRepository:
                 logger.warning("User name: %s already exists", data.username)
                 raise HTTPException(status_code=400, detail="User already exists") from e
 
-    @classmethod
-    async def update(cls, user_id: int, data: User):
+    @staticmethod
+    async def update(user_id: int, data: User):
         '''Обновляет данные пользователя'''
         logger.info("Updating the user, id: %d", user_id)
         async with db_session() as session:
@@ -72,8 +74,8 @@ class UserRepository:
 
             logger.info("User id: %d successfully updated", user_id)
 
-    @classmethod
-    async def delete(cls, user_id: int):
+    @staticmethod
+    async def delete(user_id: int):
         '''Удаляет пользователя'''
         logger.info("Deleting the user, id: %d", user_id)
         async with db_session() as session:
