@@ -16,7 +16,7 @@ logger = get_user_repository_logger()
 class UserRepository:
     '''Методы для работы с бд пользователей'''
     @staticmethod
-    async def get_by_username_and_password(username: str, password: str) -> UserModel:
+    async def get_by_creds(username: str, password: str) -> UserModel:
         '''Возвращает пользователя с определённым именем и паролем'''
         logger.info("Retrieving the user by username: %s", username)
         async with db_session() as session:

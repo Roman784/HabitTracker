@@ -81,3 +81,12 @@
 2024-12-15 13:29:16,030 user_repository WARNING User name: roma not found
 2024-12-15 13:29:21,223 user_repository INFO Retrieving the user by username: roman
 2024-12-15 13:29:21,226 user_repository DEBUG Password verifying
+2024-12-15 13:51:53,260 user_repository INFO Creating new user, name: roman
+2024-12-15 13:51:53,261 user_repository DEBUG Password hashing
+2024-12-15 13:51:53,297 user_repository INFO User id: 1 successfully created
+2024-12-15 13:53:23,188 user_repository INFO Creating new user, name: roman
+2024-12-15 13:53:23,188 user_repository DEBUG Password hashing
+2024-12-15 13:53:23,225 user_repository INFO User id: 1 successfully created
+2024-12-15 13:53:50,724 user_repository INFO Creating new user, name: roman
+2024-12-15 13:53:50,725 user_repository DEBUG Password hashing
+2024-12-15 13:53:50,757 user_repository INFO User id: 1 successfully created
