@@ -2,10 +2,10 @@
 
 
 from typing import Annotated
-from fastapi import Depends, status, APIRouter, Response, HTTPException
-from app.schemas.user_schema import User, UserResponse
+from fastapi import Depends, status, APIRouter, Response
+from app.schemas.user_schema import User
 from app.storage.repositories.user_repository import UserRepository
-from app.utils.jwt import create_access_token_for_user, get_payload_token
+from app.utils.jwt import create_access_token_for_user
 
 
 auth_router = APIRouter()
