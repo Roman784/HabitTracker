@@ -13,7 +13,7 @@ crud_router = APIRouter()
 @crud_router.get('/get_by_id', status_code=status.HTTP_200_OK)
 async def get_by_id(user_id: int) -> UserResponse:
     '''Возвращает данные пользователя'''
-    user = await UserRepository.get_one(user_id)
+    user = await UserRepository.get_by_id(user_id)
     return user
 
 

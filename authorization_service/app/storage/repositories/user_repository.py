@@ -35,7 +35,7 @@ class UserRepository:
             return user
 
     @staticmethod
-    async def get_one(user_id: int) -> UserModel:
+    async def get_by_id(user_id: int) -> UserModel:
         '''Возвращает пользователя'''
         logger.info('Retrieving the user, id: %d', user_id)
         async with db_session() as session:
