@@ -1,39 +1,54 @@
 '''Работа с jwt'''
 
 
-import jwt
-from datetime import datetime, timedelta
+from jwt import encode, decode, PyJWTError
+from datetime import datetime, timedelta, timezone
 from os import getenv
 from dotenv import load_dotenv
+from fastapi import Request, Depends, HTTPException, status
 
 
 load_dotenv()
 JWT_SECRET_KEY = getenv('JWT_SECRET_KEY')
 JWT_ALGORITHM = getenv('JWT_ALGORITHM')
-ACCESS_TOKEN_EXPIRE_MINUTES = int(getenv('ACCESS_TOKEN_EXPIRE_MINUTES'))
+JWT_ACCESS_COOKIE_NAME = getenv('JWT_ACCESS_COOKIE_NAME')
 
 
 def create_access_token_for_user(user_id: int, username: str) -> str:
     '''Создаёт JWT для пользователя'''
     return create_access_token({
-        "id": user_id,
-        "username": username
+        'id': user_id,
+        'username': username
     })
 
 
 def create_access_token(data: dict) -> str:
     '''Создает JWT.'''
-    payload = data.copy()
-    expire = datetime.now() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
-    payload.update({"exp": expire})
+    to_encode = data.copy()
+    expire = datetime.now(timezone.utc) + timedelta(days=30)
+    to_encode.update({'exp': expire})
 
-    token = jwt.encode(payload, JWT_SECRET_KEY, algorithm=JWT_ALGORITHM)
+    encode_jwt = encode(to_encode, JWT_SECRET_KEY, algorithm=JWT_ALGORITHM)
+    return encode_jwt
+
+
+def get_token(request: Request):
+    token = request.cookies.get(JWT_ACCESS_COOKIE_NAME)
+    if not token:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token not found')
     return token
 
-def verify_token(token: str):
+def get_payload_token(token: str = Depends(get_token)):
     '''Проверяет валидность токена и возвращает его данные.'''
     try:
-        payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
-        return payload
-    except jwt.PyJWTError:
-        return None
+        payload = decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
+    except PyJWTError:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token is not valid')
+    
+    # Проверка времени жизни токена.
+    expire = payload.get('exp')
+    expire_time = datetime.fromtimestamp(int(expire), tz=timezone.utc)
+    if (not expire) or (expire_time < datetime.now(timezone.utc)):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token expired')
+    
+    return payload

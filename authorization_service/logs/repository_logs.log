@@ -90,3 +90,24 @@
 2024-12-15 13:53:50,724 user_repository INFO Creating new user, name: roman
 2024-12-15 13:53:50,725 user_repository DEBUG Password hashing
 2024-12-15 13:53:50,757 user_repository INFO User id: 1 successfully created
+2024-12-15 15:16:47,451 user_repository INFO Creating new user, name: roman
+2024-12-15 15:16:47,452 user_repository DEBUG Password hashing
+2024-12-15 15:16:47,490 user_repository INFO User id: 1 successfully created
+2024-12-15 15:17:14,677 user_repository INFO Retrieving the user, id: 1
+2024-12-15 15:17:14,685 user_repository WARNING User id: 1 not found
+2024-12-15 15:17:51,898 user_repository INFO Retrieving the user, id: 1
+2024-12-15 15:17:51,905 user_repository WARNING User id: 1 not found
+2024-12-15 15:18:07,731 user_repository INFO Creating new user, name: roman
+2024-12-15 15:18:07,731 user_repository DEBUG Password hashing
+2024-12-15 15:18:07,762 user_repository INFO User id: 1 successfully created
+2024-12-15 15:18:12,021 user_repository INFO Retrieving the user, id: 1
+2024-12-15 15:18:12,025 user_repository INFO User id: 1 successfully retrieved
+2024-12-15 15:18:33,400 user_repository INFO Retrieving the user by username: roman
+2024-12-15 15:18:33,403 user_repository DEBUG Password verifying
+2024-12-15 15:18:33,422 user_repository WARNING User name: roman entered the incorrect password
+2024-12-15 15:18:37,521 user_repository INFO Retrieving the user by username: roman
+2024-12-15 15:18:37,525 user_repository DEBUG Password verifying
+2024-12-15 15:18:45,190 user_repository INFO Retrieving the user by username: roman
+2024-12-15 15:18:45,195 user_repository DEBUG Password verifying
+2024-12-15 15:18:48,165 user_repository INFO Retrieving the user, id: 1
+2024-12-15 15:18:48,169 user_repository INFO User id: 1 successfully retrieved
