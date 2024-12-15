@@ -1,3 +1,6 @@
+'''Базовый интерфейс для работы с бд'''
+
+
 from abc import ABC, abstractmethod
 from typing import List
 
@@ -5,7 +8,7 @@ from src.models.user_model import BaseModel
 
 
 class AbstractRepository(ABC):
-    '''Абстрактный класс для работы с бд'''
+    '''Интерфейс для работы с бд'''
     model: BaseModel = None
 
     @abstractmethod

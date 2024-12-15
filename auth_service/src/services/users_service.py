@@ -3,6 +3,7 @@
 
 from fastapi import HTTPException, status
 
+from src.services.base_users_service import AbstractUsersService
 from src.repositories.base_repository import AbstractRepository
 from src.schemas.user_schemas import UserCredsSchema
 from src.models.user_model import UserModel
@@ -10,12 +11,14 @@ from src.schemas.user_schemas import UserCredsSchema
 from src.utils.password_hashing import hash_password, verify_password
 
 
-class UsersService:
-    '''Сервис для работы с пользователями'''
+
+class UsersService(AbstractUsersService):
+    '''Сервис для работы с реальными пользователями'''
     def __init__(self, users_repository: AbstractRepository):
         self.users_repository: AbstractRepository = users_repository()
     
     async def create(self, data: UserCredsSchema) -> int:
+        '''Создаёт пользователя и возвращает его id'''
         data.password = hash_password(data.password)
         user_dict = data.model_dump()
 

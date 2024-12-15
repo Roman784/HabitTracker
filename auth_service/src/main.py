@@ -6,8 +6,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends
 
 from src.databse.database import create_tables, delete_tables
-from src.repositories.users_repository import UsersRepository
-from src.services.users_service import UsersService
+from src.services.base_users_service import AbstractUsersService
 from src.schemas.user_schemas import UserCredsSchema
 from src.api.dependencies import users_service
 
@@ -26,7 +25,7 @@ app = FastAPI(lifespan=lifespan)
 @app.get('/get')
 async def get(
     user_id: int, 
-    users_service: Annotated[UsersService, Depends(users_service)]
+    users_service: Annotated[AbstractUsersService, Depends(users_service)]
 ):
     user = await users_service.get_by_id(user_id)
     return {'user': user}
@@ -34,7 +33,7 @@ async def get(
 @app.get('/get-by-creds')
 async def get(
     creds: Annotated[UserCredsSchema, Depends()], 
-    users_service: Annotated[UsersService, Depends(users_service)]
+    users_service: Annotated[AbstractUsersService, Depends(users_service)]
 ):
     user = await users_service.get_by_creds(creds)
     return {'user': user}
@@ -42,7 +41,7 @@ async def get(
 @app.post('/create')
 async def create(
     data: Annotated[UserCredsSchema, Depends()],
-    users_service: Annotated[UsersService, Depends(users_service)]
+    users_service: Annotated[AbstractUsersService, Depends(users_service)]
 ):
     user_id = await users_service.create(data)
     return { 'user_id': user_id }
@@ -51,7 +50,7 @@ async def create(
 async def create(
     user_id: int, 
     new_data: Annotated[UserCredsSchema, Depends()],
-    users_service: Annotated[UsersService, Depends(users_service)]
+    users_service: Annotated[AbstractUsersService, Depends(users_service)]
 ):
     await users_service.update(user_id, new_data)
     return { 'message': 'User updated' }
@@ -59,7 +58,7 @@ async def create(
 @app.delete('/delete')
 async def delete(
     user_id: int,
-    users_service: Annotated[UsersService, Depends(users_service)]
+    users_service: Annotated[AbstractUsersService, Depends(users_service)]
 ):
     await users_service.delete(user_id)
     return { 'message': 'User deleted' }
