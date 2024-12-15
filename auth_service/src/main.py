@@ -7,7 +7,9 @@ from fastapi import FastAPI, Depends
 
 from src.databse.database import create_tables, delete_tables
 from src.repositories.users_repository import UsersRepository
+from src.services.users_service import UsersService
 from src.schemas.user_schemas import UserCredsSchema
+from src.api.dependencies import users_service
 
 
 @asynccontextmanager
@@ -22,23 +24,42 @@ app = FastAPI(lifespan=lifespan)
 
 
 @app.get('/get')
-async def get(name: str):
-    user = await UsersRepository().get_by({'name': name})
-    return {'users': user}
+async def get(
+    user_id: int, 
+    users_service: Annotated[UsersService, Depends(users_service)]
+):
+    user = await users_service.get_by_id(user_id)
+    return {'user': user}
+
+@app.get('/get-by-creds')
+async def get(
+    creds: Annotated[UserCredsSchema, Depends()], 
+    users_service: Annotated[UsersService, Depends(users_service)]
+):
+    user = await users_service.get_by_creds(creds)
+    return {'user': user}
 
 @app.post('/create')
-async def create(data: Annotated[UserCredsSchema, Depends()]):
-    user_dict = data.model_dump()
-    user_id = await UsersRepository().create(user_dict)
+async def create(
+    data: Annotated[UserCredsSchema, Depends()],
+    users_service: Annotated[UsersService, Depends(users_service)]
+):
+    user_id = await users_service.create(data)
     return { 'user_id': user_id }
 
 @app.put('/update')
-async def create(user_id: int, new_data: Annotated[UserCredsSchema, Depends()]):
-    user_dict = new_data.model_dump()
-    await UsersRepository().update(user_id, user_dict)
+async def create(
+    user_id: int, 
+    new_data: Annotated[UserCredsSchema, Depends()],
+    users_service: Annotated[UsersService, Depends(users_service)]
+):
+    await users_service.update(user_id, new_data)
     return { 'message': 'User updated' }
 
 @app.delete('/delete')
-async def delete(user_id: int):
-    await UsersRepository().delete(user_id)
+async def delete(
+    user_id: int,
+    users_service: Annotated[UsersService, Depends(users_service)]
+):
+    await users_service.delete(user_id)
     return { 'message': 'User deleted' }
