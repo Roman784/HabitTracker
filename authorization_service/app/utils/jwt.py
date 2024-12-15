@@ -3,15 +3,11 @@
 
 from jwt import encode, decode, PyJWTError
 from datetime import datetime, timedelta, timezone
-from os import getenv
-from dotenv import load_dotenv
 from fastapi import Request, Depends, HTTPException, status
+from app.configs.env_config import get_auth_data
 
 
-load_dotenv()
-JWT_SECRET_KEY = getenv('JWT_SECRET_KEY')
-JWT_ALGORITHM = getenv('JWT_ALGORITHM')
-JWT_ACCESS_COOKIE_NAME = getenv('JWT_ACCESS_COOKIE_NAME')
+auth_data = get_auth_data()
 
 
 def create_access_token_for_user(user_id: int, username: str) -> str:
@@ -21,19 +17,18 @@ def create_access_token_for_user(user_id: int, username: str) -> str:
         'username': username
     })
 
-
 def create_access_token(data: dict) -> str:
     '''Создает JWT.'''
     to_encode = data.copy()
     expire = datetime.now(timezone.utc) + timedelta(days=30)
     to_encode.update({'exp': expire})
 
-    encode_jwt = encode(to_encode, JWT_SECRET_KEY, algorithm=JWT_ALGORITHM)
+    encode_jwt = encode(to_encode, auth_data['secret_key'], auth_data['algorithm'])
     return encode_jwt
 
 
 def get_token(request: Request):
-    token = request.cookies.get(JWT_ACCESS_COOKIE_NAME)
+    token = request.cookies.get(auth_data['access_cookie_name'])
     if not token:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token not found')
     return token
@@ -41,7 +36,7 @@ def get_token(request: Request):
 def get_payload_token(token: str = Depends(get_token)):
     '''Проверяет валидность токена и возвращает его данные.'''
     try:
-        payload = decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
+        payload = decode(token, auth_data['secret_key'], algorithms=[auth_data['algorithm']])
     except PyJWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token is not valid')
     

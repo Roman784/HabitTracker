@@ -2,13 +2,10 @@
 
 
 import logging
-from os import getenv
-from dotenv import load_dotenv
+from app.configs.env_config import get_logs_data
 
 
-load_dotenv()
-DATABASE_FILE_NAME = getenv('DATABASE_LOGS_FILE')
-REPOSITORY_FILE_NAME = getenv('REPOSITORY_LOGS_FILE')
+logs_data = get_logs_data()
 
 
 loggers = {}
@@ -16,11 +13,11 @@ loggers = {}
 
 def get_database_logger() -> logging.Logger:
     '''Возвращает логер для базы данных'''
-    return create_logger('database', DATABASE_FILE_NAME)
+    return create_logger('database', logs_data['database_file_name'])
 
 def get_user_repository_logger() -> logging.Logger:
     '''Возвращает логер для репозитория пользователей'''
-    return get_logger('user_repository', REPOSITORY_FILE_NAME)
+    return get_logger('user_repository', logs_data['repository_file_name'])
 
 
 def get_logger(module_name, file_name) -> logging.Logger:

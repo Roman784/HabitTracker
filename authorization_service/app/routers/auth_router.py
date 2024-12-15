@@ -36,16 +36,4 @@ async def login_user(creds: Annotated[User, Depends()], response: Response):
 @auth_router.post('/logout', status_code=status.HTTP_200_OK)
 async def logout_user(response: Response):
     response.delete_cookie(key='access_token')
-    return {'message': 'User logged out'}
-
-
-def get_current_user_id(payload: any = Depends(get_payload_token)) -> int:
-    user_id = payload.get('id')
-    if not user_id:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='User id not found')
-    return int(user_id)
-
-@auth_router.get('/get')
-async def get(user_id: int = Depends(get_current_user_id)) -> UserResponse:
-    user = await UserRepository.get_one(user_id)
-    return user
+    return { 'message': 'User logged out '}

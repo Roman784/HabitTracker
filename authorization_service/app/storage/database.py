@@ -1,20 +1,17 @@
 '''Создание и подключение к базе данных'''
 
 
-from os import getenv
-from dotenv import load_dotenv
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from app.storage.models.base_model import BaseModel
 from app.logging.logger_factory import get_database_logger
+from app.configs.env_config import get_database_data
 
 
-load_dotenv()
-DATABASE_URL = getenv('DB_PATH')
-
+database_data = get_database_data()
 logger = get_database_logger()
 
 
-engine = create_async_engine(f'sqlite+aiosqlite:///{DATABASE_URL}')
+engine = create_async_engine(f'sqlite+aiosqlite:///{database_data['path']}')
 db_session = async_sessionmaker(bind=engine, expire_on_commit=False)
 
 
