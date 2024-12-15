@@ -12,8 +12,3 @@ class User(BaseModel):
 class UserResponse(User):
     '''Схема пользователя для выдачи'''
     id: int
-
-class UserCreateResponse(BaseModel):
-    '''Схема ответа при создании пользователя'''
-    message: str
-    user_id: int

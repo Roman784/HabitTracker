@@ -7,7 +7,7 @@ from app.storage.database import db_session
 from app.storage.models.user_model import UserModel
 from app.schemas.user_schema import User
 from app.logging.logger_factory import get_user_repository_logger
-from app.utils.password_hashing import hash_password
+from app.utils.password_hashing import hash_password, verify_password
 
 
 logger = get_user_repository_logger()
@@ -15,6 +15,25 @@ logger = get_user_repository_logger()
 
 class UserRepository:
     '''Методы для работы с бд пользователей'''
+    @staticmethod
+    async def get_by_username_and_password(username: str, password: str) -> UserModel:
+        '''Возвращает пользователя с определённым именем и паролем'''
+        logger.info("Retrieving the user by username: %s", username)
+        async with db_session() as session:
+            query = select(UserModel).where(UserModel.username == username)
+            result = await session.execute(query)
+            user = result.scalar_one_or_none()
+
+            if user is None:
+                logger.warning("User name: %s not found", username)
+                raise HTTPException(status_code=404, detail="User not found")
+
+            if not verify_password(password, user.password):
+                logger.warning("User name: %s entered the incorrect password", username)
+                raise HTTPException(status_code=401, detail="Incorrect password")
+            
+            return user
+
     @staticmethod
     async def get_one(user_id: int) -> UserModel:
         '''Возвращает пользователя'''
