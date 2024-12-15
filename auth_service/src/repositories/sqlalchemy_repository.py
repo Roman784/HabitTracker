@@ -53,6 +53,6 @@ class SQLAlchemyRepository(AbstractRepository):
         record = result.scalar_one_or_none()
 
         if record is None:
-            raise ValueError(f"Record with id: {record_id} not found")
+            raise ValueError(f"Record with id: {record_id} in model: {self.model.__name__} not found")
         
         return record

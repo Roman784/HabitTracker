@@ -1,6 +1,8 @@
 '''Сервис для работы с пользователями'''
 
 
+from fastapi import HTTPException, status
+
 from src.repositories.base_repository import AbstractRepository
 from src.schemas.user_schemas import UserCredsSchema
 from src.models.user_model import UserModel
@@ -16,28 +18,50 @@ class UsersService:
     async def create(self, data: UserCredsSchema) -> int:
         data.password = hash_password(data.password)
         user_dict = data.model_dump()
+
+        users = await self.users_repository.get_by({'name': data.name})
+        if len(users) != 0:
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='User already exists')
+
         user_id = await self.users_repository.create(user_dict)
         return user_id
     
+
     async def get_by_id(self, user_id: int) -> UserModel:
         '''Возвращает данные пользователя по id'''
         users = await self.users_repository.get_by({'id': user_id})
+
+        if len(users) == 0:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='User not found')
+
         return users[0]
     
+
     async def get_by_creds(self, creds: UserCredsSchema) -> UserModel:
         '''Возвращает данные пользователя по id'''
         users = await self.users_repository.get_by({'name': creds.name})
-        user: UserModel = users[0]
 
-        if not verify_password(creds.password, user.password):
-            return None
-        return user
+        if len(users) == 0:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='User not found')
+
+        if not verify_password(creds.password, users[0].password):
+            raise HTTPException(status_code=401, detail='Incorrect name or password')
+
+        return users[0]
+
 
     async def update(self, user_id: int, new_data: UserCredsSchema):
         '''Обновляет данные пользователя'''
         user_dict = new_data.model_dump()
-        await self.users_repository.update(user_id, user_dict)
+        try:
+            await self.users_repository.update(user_id, user_dict)
+        except ValueError as e:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+
 
     async def delete(self, user_id: int):
         '''Удаляет пользователя'''
-        await self.users_repository.delete(user_id)
+        try:
+            await self.users_repository.delete(user_id)
+        except ValueError as e:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
