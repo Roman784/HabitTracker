@@ -7,7 +7,6 @@ from src.services.base_users_service import AbstractUsersService
 from src.repositories.base_repository import AbstractRepository
 from src.schemas.user_schemas import UserCredsSchema
 from src.models.user_model import UserModel
-from src.schemas.user_schemas import UserCredsSchema
 from src.utils.password_hashing import hash_password, verify_password
 from src.logging.users_service_logger import UsersServiceLogger
 

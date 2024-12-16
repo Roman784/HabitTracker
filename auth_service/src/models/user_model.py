@@ -14,6 +14,7 @@ class UserModel(BaseModel):
     password: Mapped[str]
 
     def to_read_model(self) -> UserSchema:
+        '''str'''
         return UserSchema(
             id=self.id,
             name=self.name,
