@@ -60,8 +60,8 @@ class UsersService(AbstractUsersService):
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='User not found')
 
         if not verify_password(creds.password, users[0].password):
-            logger.warning('User name: %s entered the incorrect name or password', creds.name)
-            raise HTTPException(status_code=401, detail='Incorrect name or password')
+            logger.warning('User name: %s entered the incorrect password', creds.name)
+            raise HTTPException(status_code=401, detail='Incorrect password')
 
         logger.info('User name: %s successfully retrieved', creds.name)
         return users[0]
