@@ -70,8 +70,9 @@ class UsersService(AbstractUsersService):
     async def update(self, user_id: int, new_data: UserCredsSchema):
         '''Обновляет данные пользователя'''
         logger.info('Updating the user, id: %d', user_id)
+        new_data.password = hash_password(new_data.password)
+        user_dict = new_data.model_dump()
         try:
-            user_dict = new_data.model_dump()
             await self.users_repository.update(user_id, user_dict)
             logger.info('User id: %d successfully updated', user_id)
         except ValueError as e:

@@ -1,0 +1,8 @@
+2024-12-16 12:17:09,371 user_service INFO Creating new user name: roman
+2024-12-16 12:17:09,410 user_service INFO User name: roman successfully created
+2024-12-16 12:17:09,410 user_service INFO Retrieving the user, id: 1
+2024-12-16 12:17:09,415 user_service INFO User id: 1 successfully retrieved
+2024-12-16 12:17:25,385 user_service INFO Updating the user, id: 1
+2024-12-16 12:17:25,394 user_service INFO User id: 1 successfully updated
+2024-12-16 12:17:36,544 user_service INFO Retrieving the user, id: 1
+2024-12-16 12:17:36,548 user_service INFO User id: 1 successfully retrieved
