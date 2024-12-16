@@ -1,0 +1,8 @@
+2024-12-16 11:31:55,017 user_service INFO Creating new user name: roman
+2024-12-16 11:31:55,056 user_service INFO User name: roman successfully created
+2024-12-16 11:32:22,424 user_service INFO Retrieving the user by name: roman
+2024-12-16 11:32:22,448 user_service WARNING User name: roman entered the incorrect name or password
+2024-12-16 11:32:34,196 user_service INFO Retrieving the user by name: roman
+2024-12-16 11:32:34,219 user_service INFO User name: roman successfully retrieved
+2024-12-16 11:32:43,124 user_service INFO Retrieving the user, id: 3
+2024-12-16 11:32:43,132 user_service WARNING User id: 3 not found
