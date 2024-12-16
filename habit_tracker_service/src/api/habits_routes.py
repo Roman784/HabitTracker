@@ -20,7 +20,13 @@ async def mark_fulfillment(
     payload: Annotated[any, Depends(get_payload_token)]
 ):
     '''Отмечает выполнение привычки'''
-    return ""
+    user_id = payload['id']
+    day_fulfillment, habit_fulfillment = await habits_service.mark_fulfillment(user_id, habit_id)
+    return { 
+        'message': 'Habit marked',
+        'day_fulfillment': day_fulfillment,
+        'habit_fulfillment': habit_fulfillment
+    }
 
 
 @habits_router.get('/get-habits', status_code=status.HTTP_200_OK)

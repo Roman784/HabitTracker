@@ -6,7 +6,7 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from datetime import date
 
 from .base_model import BaseModel
-from src.schemas.habits_schemas import HabitSchema
+from src.schemas.habits_schemas import HabitSchema, HabitsCalendarSchema
 
 
 class HabitsModel(BaseModel):
@@ -16,8 +16,7 @@ class HabitsModel(BaseModel):
     user_id: Mapped[int]
     filter_id: Mapped[int] # Область, к которой прычка принадлежит - спорт, учёба...
     name: Mapped[str] = mapped_column(unique=True)
-    fulfillment: Mapped[int] # Желаемое количество выполнений раз в rate. 
-    rate: Mapped[int] # Частота выполнений - раз в день, неделю...
+    fulfillment: Mapped[int] # Желаемое количество выполнений раз в день. 
     color: Mapped[str]
     habits_calendar: Mapped[list['HabitsCalendarModel']] = relationship(
         'HabitsCalendarModel',
@@ -33,7 +32,6 @@ class HabitsModel(BaseModel):
             name=self.name,
             filter_id=self.filter_id,
             fulfillment=self.fulfillment,
-            rate=self.rate,
             color=self.color
         )
 
@@ -47,9 +45,9 @@ class HabitsCalendarModel(BaseModel):
     fulfillment: Mapped[int]
     habit: Mapped[HabitsModel] = relationship('HabitsModel', back_populates='habits_calendar')
 
-    def to_read_model(self) -> HabitSchema:
+    def to_read_model(self) -> HabitsCalendarSchema:
         '''str'''
-        return HabitSchema(
+        return HabitsCalendarSchema(
             id=self.id,
             habit_id=self.habit_id,
             date=self.date,

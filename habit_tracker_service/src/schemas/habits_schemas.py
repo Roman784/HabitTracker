@@ -9,7 +9,6 @@ class HabitAddSchema(BaseModel):
     filter_id: int
     name: str
     fulfillment: int
-    rate: int
     color: str
 
 
