@@ -46,8 +46,11 @@ class UsersService(AbstractUsersService):
             logger.warning('User id: %d not found', user_id)
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='User not found')
 
+        user = users[0]
+        self.delete_password(user)
+
         logger.info('User id: %d successfully retrieved', user_id)
-        return users[0]
+        return user
     
 
     async def get_by_creds(self, creds: UserCredsSchema) -> UserModel:
@@ -63,8 +66,11 @@ class UsersService(AbstractUsersService):
             logger.warning('User name: %s entered the incorrect password', creds.name)
             raise HTTPException(status_code=401, detail='Incorrect password')
 
+        user = users[0]
+        self.delete_password(user)
+
         logger.info('User name: %s successfully retrieved', creds.name)
-        return users[0]
+        return user
 
 
     async def update(self, user_id: int, new_data: UserCredsSchema):
@@ -89,3 +95,7 @@ class UsersService(AbstractUsersService):
         except ValueError as e:
             logger.warning('User id: %d not found', user_id)
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+    
+    def delete_password(self, user: UserModel):
+        '''Удаляет поле с паролем'''
+        del user.password

@@ -46,5 +46,6 @@ async def login_user(
 
 @auth_router.post('/logout', status_code=status.HTTP_200_OK)
 async def logout_user(response: Response):
+    '''Удаляет куку с токеном у пользователя'''
     response.delete_cookie(auth_data['access_cookie_name'])
     return { 'message': 'User logged out '}
