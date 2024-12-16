@@ -1,3 +1,5 @@
+'''Конечные точки для работы с авторизацией'''
+
 
 from typing import Annotated
 from fastapi import APIRouter, Depends, Response, status

@@ -1,14 +1,18 @@
+'''Конечные точки для CRUD операций над пользователями'''
+
 
 from typing import Annotated
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, Response, status
 
 from src.services.base_users_service import AbstractUsersService
 from src.schemas.user_schemas import UserCredsSchema
 from src.api.dependencies import users_service
 from src.api.dependencies import get_payload_token
+from src.configs.env_config import get_auth_data
 
 
 crud_router = APIRouter()
+auth_data = get_auth_data()
 
 
 @crud_router.get('/get', status_code=status.HTTP_200_OK)
@@ -57,9 +61,11 @@ async def update(
 @crud_router.delete('/delete', status_code=status.HTTP_200_OK)
 async def delete(
     users_service: Annotated[AbstractUsersService, Depends(users_service)],
-    payload: Annotated[any, Depends(get_payload_token)]
+    payload: Annotated[any, Depends(get_payload_token)],
+    response: Response
 ):
     '''Удаляет пользователя'''
     user_id = payload['id']
     await users_service.delete(user_id)
+    response.delete_cookie(auth_data['access_cookie_name'])
     return { 'message': 'User deleted' }

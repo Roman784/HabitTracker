@@ -3,7 +3,7 @@
 
 from sqlalchemy.orm import Mapped, mapped_column
 from .base_model import BaseModel
-from src.schemas.habits_schemas import HabitsSchema
+from src.schemas.habits_schemas import HabitSchema
 
 
 class HabitsModel(BaseModel):
@@ -17,9 +17,9 @@ class HabitsModel(BaseModel):
     rate: Mapped[int] # Частота выполнений - раз в день, неделю...
     color: Mapped[str]
 
-    def to_read_model(self) -> HabitsSchema:
+    def to_read_model(self) -> HabitSchema:
         '''str'''
-        return HabitsSchema(
+        return HabitSchema(
             id=self.id,
             user_id=self.user_id,
             name=self.name,

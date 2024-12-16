@@ -75,6 +75,13 @@ class UsersService(AbstractUsersService):
     async def update(self, user_id: int, new_data: UserCredsSchema):
         '''Обновляет данные пользователя'''
         logger.info('Updating the user, id: %d', user_id)
+
+        users = await self.users_repository.get_by({'name': new_data.name})
+
+        if len(users) != 0:
+            logger.warning('The user name: %s is already taken', new_data.name)
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Name is already taken')
+
         new_data.password = hash_password(new_data.password)
         user_dict = new_data.model_dump()
         try:

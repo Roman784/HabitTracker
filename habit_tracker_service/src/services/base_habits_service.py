@@ -10,6 +10,11 @@ from src.models.habits_model import HabitsModel
 class AbstractHabitsService(ABC):
     '''Интерфейс для работы с сервисами привычек'''
     @abstractmethod
+    async def mark_fulfillment():
+        '''Отмечает выполнение привычки'''
+        raise NotImplemented
+
+    @abstractmethod
     async def create() -> int:
         '''Создаёт привычку и возвращает её id'''
         raise NotImplemented

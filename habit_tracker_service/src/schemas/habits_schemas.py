@@ -4,15 +4,19 @@
 from pydantic import BaseModel
 
 
-class HabitsCredsSchema(BaseModel):
-    '''Схема с реквезитами пользователя'''
-    user_id: int
+class HabitAddSchema(BaseModel):
     filter_id: int
     name: str
     fulfillment: int
     rate: int
     color: str
 
-class HabitsSchema(HabitsCredsSchema):
-    '''Полная схема пользователя'''
+
+class HabitCredsSchema(HabitAddSchema):
+    '''Схема с реквезитами привычки'''
+    user_id: int
+
+
+class HabitSchema(HabitCredsSchema):
+    '''Полная схема привычки'''
     id: int
