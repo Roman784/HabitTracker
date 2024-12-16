@@ -6,7 +6,7 @@ from jwt import decode, PyJWTError
 from datetime import datetime, timezone
 
 from src.services.habits_service import HabitsService
-from src.repositories.habits_repository import HabitsRepository
+from src.repositories.habits_repository import HabitsRepository, HabitsCalendarRepository
 from src.services.base_habits_service import AbstractHabitsService
 from src.configs.env_config import get_auth_data
 
@@ -16,7 +16,7 @@ auth_data = get_auth_data()
 
 def habits_service() -> AbstractHabitsService:
     '''Возвращает сервис для работы с привычками'''
-    return HabitsService(HabitsRepository)
+    return HabitsService(HabitsRepository, HabitsCalendarRepository)
 
 
 def get_token(request: Request):

@@ -3,10 +3,11 @@
 
 from fastapi import HTTPException, status
 from typing import List
+from datetime import date
 
 from src.services.base_habits_service import AbstractHabitsService
 from src.repositories.base_repository import AbstractRepository
-from src.schemas.habits_schemas import HabitCredsSchema
+from src.schemas.habits_schemas import HabitCredsSchema, HabitsCalendarSchema
 from src.models.habits_model import HabitsModel
 from src.logging.habits_service_logger import HabitsServiceLogger
 
@@ -16,8 +17,9 @@ logger = HabitsServiceLogger().get_logger()
 
 class HabitsService(AbstractHabitsService):
     '''Сервис для работы с реальными привычками'''
-    def __init__(self, habits_repository: AbstractRepository):
+    def __init__(self, habits_repository: AbstractRepository, habits_calendar_repository: AbstractRepository):
         self.habits_repository: AbstractRepository = habits_repository()
+        self.habits_calendar_repository: AbstractRepository = habits_calendar_repository()
 
 
     async def create(self, data: HabitCredsSchema) -> int:
@@ -32,6 +34,8 @@ class HabitsService(AbstractHabitsService):
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Habit already exists')
 
         habit_id = await self.habits_repository.create(habit_dict)
+
+        await self.create_day_in_calendar(habit_id)
 
         logger.info('Habit by user, id: %d, successfully created', data.user_id)
         return habit_id
@@ -97,3 +101,21 @@ class HabitsService(AbstractHabitsService):
             logger.warning('Habit, id: %d, not found', habit_id)
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Habit not found')
         return habits[0]
+
+
+    async def create_day_in_calendar(self, habit_id: int):
+        '''Создаёт запись в бд календаря с сегодняшней датой'''
+        logger.info('Creating new day by habit, id: %d', habit_id)
+        day: HabitsCalendarSchema = HabitsCalendarSchema(
+            habit_id=habit_id,
+            date=str(date.today()),
+            fulfillment=0
+        )
+
+        days = await self.habits_calendar_repository.get_by({'habit_id': day.habit_id, 'date': day.date})
+        if len(days) != 0:
+            logger.warning('Day, date: %s, already exists', day.date)
+            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Day already exists')
+
+        await self.habits_calendar_repository.create(day.model_dump())
+        logger.info('Day by habit, id: %d, successfully created', habit_id)

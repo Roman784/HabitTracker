@@ -2,6 +2,7 @@
 
 
 from pydantic import BaseModel
+from datetime import date
 
 
 class HabitAddSchema(BaseModel):
@@ -20,3 +21,8 @@ class HabitCredsSchema(HabitAddSchema):
 class HabitSchema(HabitCredsSchema):
     '''Полная схема привычки'''
     id: int
+
+class HabitsCalendarSchema(BaseModel):
+    habit_id: int
+    date: date
+    fulfillment: int

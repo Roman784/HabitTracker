@@ -13,8 +13,14 @@ from src.api.dependencies import get_payload_token
 habits_router = APIRouter()
 
 
-async def mark_fulfillment():
+@habits_router.put('/mark', status_code=status.HTTP_200_OK)
+async def mark_fulfillment(
+    habit_id: int,
+    habits_service: Annotated[AbstractHabitsService, Depends(habits_service)],
+    payload: Annotated[any, Depends(get_payload_token)]
+):
     '''Отмечает выполнение привычки'''
+    return ""
 
 
 @habits_router.get('/get-habits', status_code=status.HTTP_200_OK)

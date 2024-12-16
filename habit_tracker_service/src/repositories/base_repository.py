@@ -12,8 +12,8 @@ class AbstractRepository(ABC):
     model: BaseModel = None
 
     @abstractmethod
-    async def create() -> int:
-        '''Создаёт запись в бд и возвращает её id'''
+    async def create() -> BaseModel:
+        '''Создаёт запись в бд и возвращает её'''
         raise NotImplemented
 
     @abstractmethod
