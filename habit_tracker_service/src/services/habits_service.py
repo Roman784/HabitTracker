@@ -39,14 +39,9 @@ class HabitsService(AbstractHabitsService):
     async def get_by_id(self, user_id: int, habit_id: int) -> HabitsModel:
         '''Возвращает данные привычки по id'''
         # logger.info('Retrieving the habit, id: %d', habit_id)
-        habits = await self.habits_repository.get_by({'id': habit_id, 'user_id': user_id})
-
-        if len(habits) == 0:
-            # logger.warning('User id: %d not found', habit_id)
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Habit not found')
-
+        habit: HabitsModel = await self.check_for_accessibility_and_get(user_id, habit_id)
         # logger.info('User id: %d successfully retrieved', habit_id)
-        return habits[0]
+        return habit
 
 
     async def get_all(self, user_id: int) -> List[HabitsModel]:
@@ -58,15 +53,7 @@ class HabitsService(AbstractHabitsService):
     async def update(self, user_id: int, habit_id: int, new_data: HabitCredsSchema):
         '''Обновляет данные привычки'''
         # logger.info('Updating the habit, id: %d', habit_id)
-
-        habits = await self.habits_repository.get_by({'id': habit_id})
-
-        if len(habits) == 0:
-            # logger.warning('User id: %d not found', habit_id)
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Habit not found')
-
-        if habits[0].user_id != user_id:
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Habit of another user')
+        await self.check_for_accessibility_and_get(user_id, habit_id)
 
         habit_dict = new_data.model_dump()
         try:
@@ -80,15 +67,7 @@ class HabitsService(AbstractHabitsService):
     async def delete(self, user_id: int, habit_id: int):
         '''Удаляет привычку'''
         # logger.info('Deleting the habit, id: %d', habit_id)
-
-        habits = await self.habits_repository.get_by({'id': habit_id})
-
-        if len(habits) == 0:
-            # logger.warning('User id: %d not found', habit_id)
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Habit not found')
-
-        if habits[0].user_id != user_id:
-            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Habit of another user')
+        await self.check_for_accessibility_and_get(user_id, habit_id)
 
         try:
             await self.habits_repository.delete(habit_id)
@@ -96,3 +75,19 @@ class HabitsService(AbstractHabitsService):
         except ValueError as e:
             # logger.warning('User id: %d not found', habit_id)
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+
+
+    async def check_for_accessibility_and_get(self, user_id: int, habit_id: int) -> HabitsModel:
+        '''Проверяет привычку на доступность - корректный ли автор. Возвращает привычку'''
+        habit: HabitsModel = await self.check_for_existence_and_get(habit_id)
+        if habit.user_id != user_id:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Habit of another user')
+        return habit
+
+    async def check_for_existence_and_get(self, habit_id: int) -> HabitsModel:
+        '''Проверяет наличие привычки в бд и возвращает её, если существует'''
+        habits = await self.habits_repository.get_by({'id': habit_id})
+        if len(habits) == 0:
+            # logger.warning('User id: %d not found', habit_id)
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Habit not found')
+        return habits[0]
