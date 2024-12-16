@@ -32,11 +32,11 @@ def get_payload_token(token: str = Depends(get_token)):
         payload = decode(token, auth_data['secret_key'], algorithms=[auth_data['algorithm']])
     except PyJWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token is not valid')
-    
+
     # Проверка времени жизни токена.
     expire = payload.get('exp')
     expire_time = datetime.fromtimestamp(int(expire), tz=timezone.utc)
     if (not expire) or (expire_time < datetime.now(timezone.utc)):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token expired')
-    
+
     return payload
