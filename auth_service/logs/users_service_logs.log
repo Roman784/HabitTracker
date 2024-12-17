@@ -70,3 +70,23 @@
 2024-12-16 14:45:52,710 user_service INFO User id: 1 successfully retrieved
 2024-12-16 14:46:17,778 user_service INFO Retrieving the user by name: roman
 2024-12-16 14:46:17,802 user_service INFO User name: roman successfully retrieved
+2024-12-16 17:52:16,642 user_service INFO Creating new user name: roman
+2024-12-16 17:52:16,679 user_service INFO User name: roman successfully created
+2024-12-16 17:52:16,679 user_service INFO Retrieving the user, id: 1
+2024-12-16 17:52:16,683 user_service INFO User id: 1 successfully retrieved
+2024-12-16 17:52:21,588 user_service INFO Creating new user name: aboba
+2024-12-16 17:52:21,618 user_service INFO User name: aboba successfully created
+2024-12-16 17:52:21,618 user_service INFO Retrieving the user, id: 2
+2024-12-16 17:52:21,621 user_service INFO User id: 2 successfully retrieved
+2024-12-16 17:52:55,581 user_service INFO Updating the user, id: 2
+2024-12-16 17:52:55,584 user_service WARNING The user name: aboba is already taken
+2024-12-16 17:53:45,215 user_service INFO Retrieving the user by name: aboba
+2024-12-16 17:53:45,239 user_service INFO User name: aboba successfully retrieved
+2024-12-16 17:54:25,027 user_service INFO Retrieving the user by name: roman
+2024-12-16 17:54:25,050 user_service INFO User name: roman successfully retrieved
+2024-12-16 18:00:35,135 user_service INFO Retrieving the user by name: aboba
+2024-12-16 18:00:35,159 user_service INFO User name: aboba successfully retrieved
+2024-12-16 18:36:31,254 user_service INFO Retrieving the user by name: roman
+2024-12-16 18:36:31,311 user_service INFO User name: roman successfully retrieved
+2024-12-16 20:33:50,869 user_service INFO Retrieving the user by name: aboba
+2024-12-16 20:33:50,940 user_service INFO User name: aboba successfully retrieved

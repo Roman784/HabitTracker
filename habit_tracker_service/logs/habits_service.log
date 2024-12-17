@@ -64,3 +64,9 @@
 2024-12-16 20:40:17,369 habits_service INFO Fulfillment is, id: 1, successfully marked
 2024-12-16 20:40:18,229 habits_service INFO Markering the fulfillment of habit, id: 1
 2024-12-16 20:40:18,245 habits_service INFO Fulfillment is, id: 1, successfully marked
+2024-12-16 20:44:58,481 habits_service INFO Creating new habit by user, id: 2
+2024-12-16 20:44:58,500 habits_service INFO Creating new day by habit, id: 2
+2024-12-16 20:44:58,512 habits_service INFO Day by habit, id: 2, successfully created
+2024-12-16 20:44:58,512 habits_service INFO Habit by user, id: 2, successfully created
+2024-12-16 20:45:05,012 habits_service INFO Deleting the habit, id: 1
+2024-12-16 20:45:05,035 habits_service INFO Habit, id: 1, successfully deleted
