@@ -270,3 +270,153 @@
 2024-12-17 22:07:04,121 habits_service INFO Habits of user, id: 2, successfully retrieved
 2024-12-17 22:07:06,957 habits_service INFO Retrieving all habits of user, id: 2
 2024-12-17 22:07:06,961 habits_service INFO Habits of user, id: 2, successfully retrieved
+2024-12-17 22:36:47,364 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:36:47,468 habits_service WARNING Habit, name: Habit2, already exists
+2024-12-17 22:36:57,925 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:36:57,960 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:36:57,981 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:36:57,981 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:37:00,461 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:37:00,490 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 22:37:00,505 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 22:37:00,506 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:45:41,073 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:45:41,089 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:45:41,101 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:45:41,101 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:46:33,063 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:46:33,080 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:46:33,091 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:46:33,091 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:47:30,538 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:47:30,557 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:47:30,569 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:47:30,569 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:48:15,488 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:48:15,508 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:48:15,520 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:48:15,520 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:48:37,768 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:48:37,785 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:48:37,797 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:48:37,797 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:48:40,803 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:48:40,814 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 22:48:40,824 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 22:48:40,824 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:49:06,016 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:49:06,034 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:49:06,048 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:49:06,048 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:49:42,202 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:49:42,219 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:49:42,232 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:49:42,232 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:51:19,640 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:51:19,658 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:51:19,670 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:51:19,670 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:52:11,743 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:52:11,761 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 22:52:11,773 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 22:52:11,773 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:52:14,500 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:52:14,512 habits_service INFO Creating a new day of habit, id: 3
+2024-12-17 22:52:14,523 habits_service INFO Day of habit, id: 3, successfully created
+2024-12-17 22:52:14,523 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:52:36,598 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:52:36,635 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:52:36,656 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:52:36,656 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:53:31,022 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:53:31,042 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:53:31,054 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:53:31,054 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:54:22,107 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:54:22,132 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:54:22,148 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:54:22,148 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:54:37,819 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:54:37,848 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:54:37,862 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:54:37,863 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:55:05,313 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:55:05,338 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:55:05,354 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:55:05,354 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:55:55,674 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:55:55,693 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:55:55,705 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:55:55,705 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:58:43,585 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:58:43,603 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:58:43,615 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:58:43,616 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:59:48,705 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:59:48,724 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 22:59:48,736 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 22:59:48,736 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:59:51,077 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:59:51,090 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 22:59:51,101 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 22:59:51,102 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 22:59:53,882 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 22:59:53,894 habits_service INFO Creating a new day of habit, id: 3
+2024-12-17 22:59:53,905 habits_service INFO Day of habit, id: 3, successfully created
+2024-12-17 22:59:53,905 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:00:32,908 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:00:32,925 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 23:00:32,938 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 23:00:32,939 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:00:35,390 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:00:35,405 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 23:00:35,421 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 23:00:35,422 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:02:01,585 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:02:01,606 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 23:02:01,618 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 23:02:01,618 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:02:04,445 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:02:04,457 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 23:02:04,468 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 23:02:04,468 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:03:51,662 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:03:51,679 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 23:03:51,692 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 23:03:51,692 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:03:54,068 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:03:54,082 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 23:03:54,092 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 23:03:54,092 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:04:25,745 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:04:25,758 habits_service WARNING Habit, name: habit1, already exists
+2024-12-17 23:04:28,245 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:04:28,250 habits_service WARNING Habit, name: habit2, already exists
+2024-12-17 23:04:30,734 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:04:30,748 habits_service INFO Creating a new day of habit, id: 3
+2024-12-17 23:04:30,760 habits_service INFO Day of habit, id: 3, successfully created
+2024-12-17 23:04:30,760 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:35:57,847 habits_service INFO Markering the fulfillment of habit, id: 1
+2024-12-17 23:35:57,874 habits_service INFO Fulfillment is, id: 1, successfully marked
+2024-12-17 23:36:25,261 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:36:25,266 habits_service WARNING Habit, name: habit3, already exists
+2024-12-17 23:36:54,263 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:37:26,768 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:37:47,710 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:37:47,728 habits_service INFO Creating a new day of habit, id: 1
+2024-12-17 23:37:47,747 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-17 23:37:47,748 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:37:49,510 habits_service INFO Creating new habit of user, id: 2
+2024-12-17 23:37:49,518 habits_service INFO Creating a new day of habit, id: 2
+2024-12-17 23:37:49,528 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-17 23:37:49,528 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-17 23:38:49,161 habits_service INFO Markering the fulfillment of habit, id: 1
+2024-12-17 23:38:49,184 habits_service INFO Fulfillment is, id: 1, successfully marked
+2024-12-17 23:48:59,171 habits_service INFO Markering the fulfillment of habit, id: 2
+2024-12-17 23:48:59,194 habits_service INFO Fulfillment is, id: 2, successfully marked
+2024-12-17 23:49:00,273 habits_service INFO Markering the fulfillment of habit, id: 2
+2024-12-17 23:49:00,288 habits_service INFO Fulfillment is, id: 2, successfully marked
+2024-12-17 23:49:00,886 habits_service INFO Markering the fulfillment of habit, id: 2
+2024-12-17 23:49:00,903 habits_service INFO Fulfillment is, id: 2, successfully marked
+2024-12-17 23:49:21,505 habits_service INFO Markering the fulfillment of habit, id: 1
+2024-12-17 23:49:21,521 habits_service INFO Fulfillment is, id: 1, successfully marked

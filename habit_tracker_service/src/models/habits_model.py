@@ -1,9 +1,8 @@
 '''Модели привычек'''
 
 
-from sqlalchemy import ForeignKey, Date
+from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from datetime import date
 
 from .base_model import BaseModel
 from src.schemas.habits_schemas import HabitSchema, HabitsCalendarSchema
@@ -15,7 +14,7 @@ class HabitsModel(BaseModel):
 
     user_id: Mapped[int]
     filter_id: Mapped[int] # Область, к которой прычка принадлежит - спорт, учёба...
-    name: Mapped[str] = mapped_column(unique=True)
+    name: Mapped[str]
     fulfillment: Mapped[int] # Желаемое количество выполнений раз в день. 
     color: Mapped[str]
     habits_calendar: Mapped[list['HabitsCalendarModel']] = relationship(

@@ -10,10 +10,10 @@ async def on_habits_activity(message: IncomingMessage):
     async with message.process():
         user_id = loads(message.body)['user_id']
         service = habits_service()
-        habits = await service.get_all(user_id)
-        habits_response = [row.to_read_model().model_dump() for row in habits]
+        activities = await service.get_all_activity(user_id)
+
         broker = message_broker()
         await broker.connect()
-        await broker.send_message(message.reply_to, {'habits': habits_response})
+        await broker.send_message(message.reply_to, {'activities': activities})
         await broker.close()
     

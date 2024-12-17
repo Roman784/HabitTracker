@@ -2,12 +2,13 @@
 
 
 from fastapi import HTTPException, status
-from typing import List
-from datetime import date, datetime
+from typing import List, Dict
+from datetime import date
+from sqlalchemy import select, func
 
 from src.services.base_habits_service import AbstractHabitsService
 from src.repositories.base_repository import AbstractRepository
-from src.schemas.habits_schemas import HabitCredsSchema, HabitsCalendarSchema
+from src.schemas.habits_schemas import HabitCredsSchema, HabitsCalendarSchema, HabitsActivitySchema
 from src.models.habits_model import HabitsModel, HabitsCalendarModel
 from src.logging.habits_service_logger import HabitsServiceLogger
 
@@ -58,12 +59,6 @@ class HabitsService(AbstractHabitsService):
         logger.info('Creating new habit of user, id: %d', data.user_id)
 
         habit_dict = data.model_dump()
-
-        habits = await self.habits_repository.get_by({'name': data.name})
-        if len(habits) != 0:
-            logger.warning('Habit, name: %s, already exists', data.name)
-            raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail='Habit already exists')
-
         habit_id = await self.habits_repository.create(habit_dict)
 
         await self.create_day_in_calendar(habit_id)
@@ -88,6 +83,21 @@ class HabitsService(AbstractHabitsService):
 
         logger.info('Habits of user, id: %d, successfully retrieved', user_id)
         return habits
+
+
+    async def get_all_activity(self, user_id: int) -> List[Dict[str, int]]:
+        '''Возвращает всю активность по дням'''
+        query = (select(HabitsCalendarModel.date, func.sum(HabitsCalendarModel.fulfillment))
+                     .join(HabitsModel)
+                     .filter(HabitsModel.user_id == user_id)
+                     .group_by(HabitsCalendarModel.date))
+        activities = await self.habits_repository.custom_query(query)
+
+        activities_list = []
+        for date, fulfillment in activities:
+            activities_list.append({'date': str(date), 'fulfillment': fulfillment})
+
+        return activities_list
 
 
     async def update(self, user_id: int, habit_id: int, new_data: HabitCredsSchema):

@@ -23,12 +23,14 @@ class SQLAlchemyRepository(AbstractRepository):
             await session.commit()
             return record.id
 
+
     async def get_by(self, filter_by: dict) -> List[BaseModel]:
         '''Возвращает список записей по указанному фильтру'''
         async with db_session() as session:
             query = select(self.model).filter_by(**filter_by)
             result = await session.execute(query)
             return result.scalars().all()
+
 
     async def update(self, record_id: int, new_data: dict):
         '''Обновляет данные записи'''
@@ -37,6 +39,7 @@ class SQLAlchemyRepository(AbstractRepository):
             for key, value in new_data.items():
                 setattr(record, key, value)
             await session.commit()
+
 
     async def delete(self, record_id: int):
         '''Удаляет запись'''
@@ -56,3 +59,10 @@ class SQLAlchemyRepository(AbstractRepository):
             raise ValueError(f"Record with id: {record_id} in model: {self.model.__name__} not found")
         
         return record
+
+
+    async def custom_query(self, query):
+        '''Выполняет переданный запрос и возвращает все данные'''
+        async with db_session() as session:
+            result = await session.execute(query)
+            return result.all()

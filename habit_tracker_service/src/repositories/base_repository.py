@@ -30,3 +30,8 @@ class AbstractRepository(ABC):
     async def delete():
         '''Удаляет запись'''
         raise NotImplemented
+
+    @abstractmethod
+    async def custom_query():
+        '''Выполняет переданный запрос и возвращает все данные'''
+        raise NotImplemented

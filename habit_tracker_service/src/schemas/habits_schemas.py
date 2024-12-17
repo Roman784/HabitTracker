@@ -21,7 +21,13 @@ class HabitSchema(HabitCredsSchema):
     '''Полная схема привычки'''
     id: int
 
+
 class HabitsCalendarSchema(BaseModel):
     habit_id: int
+    date: date
+    fulfillment: int
+
+
+class HabitsActivitySchema(BaseModel):
     date: date
     fulfillment: int

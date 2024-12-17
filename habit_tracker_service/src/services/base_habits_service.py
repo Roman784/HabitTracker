@@ -5,6 +5,7 @@ from abc import ABC, abstractmethod
 from typing import List
 
 from src.models.habits_model import HabitsModel
+from src.schemas.habits_schemas import HabitsActivitySchema
 
 
 class AbstractHabitsService(ABC):
@@ -27,6 +28,11 @@ class AbstractHabitsService(ABC):
     @abstractmethod
     async def get_all() -> List[HabitsModel]:
         '''Возвращает все привычки'''
+        raise NotImplemented
+
+    @abstractmethod
+    async def get_all_activity() -> List[HabitsActivitySchema]:
+        '''Возвращает всю активность по дням'''
         raise NotImplemented
 
     @abstractmethod
