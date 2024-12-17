@@ -420,3 +420,45 @@
 2024-12-17 23:49:00,903 habits_service INFO Fulfillment is, id: 2, successfully marked
 2024-12-17 23:49:21,505 habits_service INFO Markering the fulfillment of habit, id: 1
 2024-12-17 23:49:21,521 habits_service INFO Fulfillment is, id: 1, successfully marked
+2024-12-18 00:01:27,305 habits_service INFO Markering the fulfillment of day, id: 2
+2024-12-18 00:01:27,323 habits_service INFO Creating a new day of habit, id: 1
+2024-12-18 00:01:27,339 habits_service INFO Day of habit, id: 1, successfully created
+2024-12-18 00:01:27,353 habits_service INFO Fulfillment is, id: 5, successfully marked
+2024-12-18 00:02:02,650 habits_service INFO Markering the fulfillment of day, id: 2
+2024-12-18 00:02:02,659 habits_service INFO Creating a new day of habit, id: 1
+2024-12-18 00:02:02,664 habits_service WARNING Day, date: 2024-12-18, already exists
+2024-12-18 00:02:20,237 habits_service INFO Markering the fulfillment of day, id: 3
+2024-12-18 00:02:20,253 habits_service INFO Fulfillment is, id: 3, successfully marked
+2024-12-18 00:02:35,512 habits_service INFO Markering the fulfillment of day, id: 10
+2024-12-18 00:02:35,522 habits_service INFO Creating a new day of habit, id: 1
+2024-12-18 00:02:35,526 habits_service WARNING Day, date: 2024-12-18, already exists
+2024-12-18 00:03:05,624 habits_service INFO Markering the fulfillment of day, id: 10
+2024-12-18 00:03:05,626 habits_service WARNING Habit, id: 3, of another user
+2024-12-18 00:03:10,090 habits_service INFO Markering the fulfillment of day, id: 10
+2024-12-18 00:03:10,099 habits_service INFO Creating a new day of habit, id: 2
+2024-12-18 00:03:10,109 habits_service INFO Day of habit, id: 2, successfully created
+2024-12-18 00:03:10,121 habits_service INFO Fulfillment is, id: 6, successfully marked
+2024-12-18 00:03:26,727 habits_service INFO Markering the fulfillment of day, id: 10
+2024-12-18 00:03:26,736 habits_service INFO Creating a new day of habit, id: 2
+2024-12-18 00:03:26,740 habits_service WARNING Day, date: 2024-12-18, already exists
+2024-12-18 00:03:35,087 habits_service INFO Markering the fulfillment of day, id: 10
+2024-12-18 00:03:35,091 habits_service WARNING Habit, id: 4, not found
+2024-12-18 00:03:40,130 habits_service INFO Markering the fulfillment of day, id: 1
+2024-12-18 00:03:40,157 habits_service INFO Fulfillment is, id: 1, successfully marked
+2024-12-18 00:04:22,825 habits_service INFO Markering the fulfillment of day, id: 3
+2024-12-18 00:04:22,844 habits_service INFO Fulfillment is, id: 3, successfully marked
+2024-12-18 00:08:00,637 habits_service INFO Retrieving all habits of user, id: 2
+2024-12-18 00:08:00,641 habits_service INFO Habits of user, id: 2, successfully retrieved
+2024-12-18 00:08:25,623 habits_service INFO Creating new habit of user, id: 2
+2024-12-18 00:08:25,631 habits_service INFO Creating a new day of habit, id: 4
+2024-12-18 00:08:25,640 habits_service INFO Day of habit, id: 4, successfully created
+2024-12-18 00:08:25,640 habits_service INFO Habit of user, id: 2, successfully created
+2024-12-18 00:08:28,808 habits_service INFO Retrieving all habits of user, id: 2
+2024-12-18 00:08:28,812 habits_service INFO Habits of user, id: 2, successfully retrieved
+2024-12-18 00:09:07,235 habits_service INFO Markering the fulfillment of day, id: 1
+2024-12-18 00:09:07,244 habits_service INFO Creating a new day of habit, id: 4
+2024-12-18 00:09:07,248 habits_service WARNING Day, date: 2024-12-18, already exists
+2024-12-18 00:09:14,131 habits_service INFO Markering the fulfillment of day, id: 7
+2024-12-18 00:09:14,148 habits_service INFO Fulfillment is, id: 7, successfully marked
+2024-12-18 00:09:20,570 habits_service INFO Markering the fulfillment of day, id: 7
+2024-12-18 00:09:20,590 habits_service INFO Fulfillment is, id: 7, successfully marked

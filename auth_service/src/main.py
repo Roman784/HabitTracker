@@ -12,7 +12,7 @@ from src.api.crud_routes import crud_router
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     '''Жизненный цикл приложения. Обновляет бд'''
-    await delete_tables()
+    # await delete_tables()
     await create_tables()
     yield
 

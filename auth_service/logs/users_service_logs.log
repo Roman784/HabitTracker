@@ -90,3 +90,19 @@
 2024-12-16 18:36:31,311 user_service INFO User name: roman successfully retrieved
 2024-12-16 20:33:50,869 user_service INFO Retrieving the user by name: aboba
 2024-12-16 20:33:50,940 user_service INFO User name: aboba successfully retrieved
+2024-12-18 00:05:46,842 user_service INFO Creating new user, name: roman
+2024-12-18 00:05:46,882 user_service INFO User, name: roman, successfully created
+2024-12-18 00:05:46,882 user_service INFO Retrieving the user, id: 1
+2024-12-18 00:05:46,886 user_service INFO User, id: 1, successfully retrieved
+2024-12-18 00:05:53,993 user_service INFO Creating new user, name: vladimir
+2024-12-18 00:05:54,024 user_service INFO User, name: vladimir, successfully created
+2024-12-18 00:05:54,024 user_service INFO Retrieving the user, id: 2
+2024-12-18 00:05:54,027 user_service INFO User, id: 2, successfully retrieved
+2024-12-18 00:06:10,628 user_service INFO Retrieving the user, name: roman
+2024-12-18 00:06:10,651 user_service INFO User, name: roman, successfully retrieved
+2024-12-18 00:07:05,487 user_service INFO Retrieving the user, name: roman
+2024-12-18 00:07:05,510 user_service INFO User, name: roman, successfully retrieved
+2024-12-18 00:07:49,745 user_service INFO Retrieving the user, name: vladimir
+2024-12-18 00:07:49,769 user_service WARNING User, name: vladimir, entered the incorrect password
+2024-12-18 00:07:55,899 user_service INFO Retrieving the user, name: vladimir
+2024-12-18 00:07:55,922 user_service INFO User, name: vladimir, successfully retrieved

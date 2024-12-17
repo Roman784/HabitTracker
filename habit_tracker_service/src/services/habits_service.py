@@ -8,7 +8,8 @@ from sqlalchemy import select, func
 
 from src.services.base_habits_service import AbstractHabitsService
 from src.repositories.base_repository import AbstractRepository
-from src.schemas.habits_schemas import HabitCredsSchema, HabitsCalendarSchema, HabitsActivitySchema
+from src.schemas.habits_schemas import HabitCredsSchema, HabitsCalendarSchema
+from src.models.base_model import BaseModel
 from src.models.habits_model import HabitsModel, HabitsCalendarModel
 from src.logging.habits_service_logger import HabitsServiceLogger
 
@@ -23,11 +24,14 @@ class HabitsService(AbstractHabitsService):
         self.habits_calendar_repository: AbstractRepository = habits_calendar_repository()
 
 
-    async def mark_fulfillment(self, user_id: int, habit_id: int):
+    async def mark_fulfillment(self, user_id: int, habit_id: int, day_id: int):
         '''Отмечает выполнение привычки'''
-        logger.info('Markering the fulfillment of habit, id: %d', habit_id)
+        logger.info('Markering the fulfillment of day, id: %d', day_id)
         habit: HabitsModel = await self.check_for_accessibility_and_get(user_id, habit_id)
-        days = await self.habits_calendar_repository.get_by({'habit_id': habit_id, 'date': str(date.today())})
+        days: List[BaseModel] = await self.habits_calendar_repository.get_by({'habit_id': habit_id, 'id': day_id})
+
+        # habit: HabitsModel = await self.check_for_accessibility_and_get(user_id, habit_id)
+        # days = await self.habits_calendar_repository.get_by({'habit_id': habit_id, 'date': str(date.today())})
         day: HabitsCalendarModel = None
 
         # Получение текущего дня, если его нет - создаётся новый.
