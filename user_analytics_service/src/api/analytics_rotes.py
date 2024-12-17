@@ -7,58 +7,28 @@ from pika import BlockingConnection, ConnectionParameters
 import json
 import threading
 import asyncio
+from pika.adapters.blocking_connection import BlockingChannel
+from pika.spec import Basic, BasicProperties
 
-from src.api.dependencies import get_payload_token
+from src.message_broker.base_message_broker import AbstractMessageBroker
+from src.api.dependencies import message_broker, get_payload_token
 
 
 analytics_router = APIRouter()
 
 
-connection_params = ConnectionParameters(
-    host='localhost',
-    port=5672,
-)
-
-
-response_queue = asyncio.Queue()
-
-
-def process_message(ch, method, properties, body):
-    asyncio.run(response_queue.put(body.decode()))
-    ch.basic_ack(delivery_tag=method.delivery_tag)
-
-
-def send_request(user_id: int):
-    with BlockingConnection(connection_params) as conn:
-        with conn.channel() as ch:
-            ch.queue_declare(queue='request')
-            ch.basic_publish(exchange='',
-                             routing_key='request',
-                             body=str(user_id))
-
-
-def get_response():
-    with BlockingConnection(connection_params) as conn:
-        with conn.channel() as ch:
-            ch.queue_declare(queue='response')
-            ch.basic_consume(
-                queue='response',
-                on_message_callback=process_message
-            )
-            ch.start_consuming()
-    
-
-
 @analytics_router.get('/activity', status_code=status.HTTP_200_OK)
 async def get_activity(
-    payload: Annotated[any, Depends(get_payload_token)]
+    payload: Annotated[any, Depends(get_payload_token)],
+    broker: Annotated[AbstractMessageBroker, Depends(message_broker)]
 ):
     '''Возвращает всю активность пользователя'''
     user_id = payload['id']
-    threading.Thread(target=get_response).start()
-    send_request(user_id)
-    response = await response_queue.get()
-    return json.loads(response)
+    await broker.connect()
+    reply_to = await broker.send_message('habits_activity_request', {'user_id': user_id})
+    response = await broker.get_response(reply_to)
+    await broker.close()
+    return response
     
     
     

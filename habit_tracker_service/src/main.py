@@ -7,17 +7,18 @@ import threading
 
 from src.database.database import create_tables, delete_tables
 from src.api.habits_routes import habits_router
-from src.api.rabbitmq_api import get_request
+from src.message_broker.message_brokers import connect_brokers, close_brokers, start_consuming
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(_: FastAPI):
     '''Жизненный цикл приложения. Обновляет бд'''
     await delete_tables()
     await create_tables()
-    thread = threading.Thread(target=get_request)
-    thread.start()
+    await connect_brokers()
+    await start_consuming()
     yield
+    await close_brokers()
 
 
 app = FastAPI(lifespan=lifespan)

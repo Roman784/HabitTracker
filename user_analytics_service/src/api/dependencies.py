@@ -6,9 +6,16 @@ from jwt import decode, PyJWTError
 from datetime import datetime, timezone
 
 from src.configs.env_config import get_auth_data
+from src.message_broker.base_message_broker import AbstractMessageBroker
+from src.message_broker.rabbitmq_broker import RabbitMQBroker
 
 
 auth_data = get_auth_data()
+
+
+def message_broker()-> AbstractMessageBroker:
+    '''Возвращает текущий брокер сообщений'''
+    return RabbitMQBroker()
 
 
 def get_token(request: Request):

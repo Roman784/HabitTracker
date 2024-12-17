@@ -34,7 +34,7 @@ async def get_all(
     habits_service: Annotated[AbstractHabitsService, Depends(habits_service)],
     payload: Annotated[any, Depends(get_payload_token)]
 ):
-    '''Возвращает данные пользователя по id'''
+    '''Возвращает данные привычек по id'''
     user_id = payload['id']
     habits = await habits_service.get_all(user_id)
     return {'habits': habits}

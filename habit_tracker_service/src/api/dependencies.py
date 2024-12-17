@@ -9,14 +9,21 @@ from src.services.habits_service import HabitsService
 from src.repositories.habits_repository import HabitsRepository, HabitsCalendarRepository
 from src.services.base_habits_service import AbstractHabitsService
 from src.configs.env_config import get_auth_data
+from src.message_broker.base_message_broker import AbstractMessageBroker
+from src.message_broker.rabbitmq_broker import RabbitMQBroker
 
 
 auth_data = get_auth_data()
 
 
 def habits_service() -> AbstractHabitsService:
-    '''Возвращает сервис для работы с привычками'''
+    '''Возвращает текущий сервис для работы с привычками'''
     return HabitsService(HabitsRepository, HabitsCalendarRepository)
+
+
+def message_broker()-> AbstractMessageBroker:
+    '''Возвращает текущий брокер сообщений'''
+    return RabbitMQBroker()
 
 
 def get_token(request: Request):
