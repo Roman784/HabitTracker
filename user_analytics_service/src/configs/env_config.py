@@ -9,8 +9,7 @@ load_dotenv()
 JWT_SECRET_KEY = getenv('JWT_SECRET_KEY')
 JWT_ALGORITHM = getenv('JWT_ALGORITHM')
 JWT_ACCESS_COOKIE_NAME = getenv('JWT_ACCESS_COOKIE_NAME')
-DATABASE_LOGS_FILE = getenv('DATABASE_LOGS_FILE')
-HABITS_SERVICE_FILE = getenv('HABITS_SERVICE_FILE')
+MESSAGE_BROKER_FILE = getenv('MESSAGE_BROKER_FILE')
 
 
 def get_auth_data():
@@ -21,8 +20,7 @@ def get_auth_data():
     }
 
 
-# def get_logs_data():
-#     return {
-#         'database_file_path': DATABASE_LOGS_FILE,
-#         'habits_service_file_path': HABITS_SERVICE_FILE
-#     }
+def get_logs_data():
+    return {
+        'message_broker_file_path': MESSAGE_BROKER_FILE
+    }

@@ -30,11 +30,8 @@ class HabitsService(AbstractHabitsService):
         habit: HabitsModel = await self.check_for_accessibility_and_get(user_id, habit_id)
         days: List[BaseModel] = await self.habits_calendar_repository.get_by({'habit_id': habit_id, 'id': day_id})
 
-        # habit: HabitsModel = await self.check_for_accessibility_and_get(user_id, habit_id)
-        # days = await self.habits_calendar_repository.get_by({'habit_id': habit_id, 'date': str(date.today())})
-        day: HabitsCalendarModel = None
-
         # Получение текущего дня, если его нет - создаётся новый.
+        day: HabitsCalendarModel = None
         if len(days) != 0:
             day = days[0]
         else:

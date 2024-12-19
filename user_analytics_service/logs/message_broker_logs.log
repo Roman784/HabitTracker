@@ -1,0 +1,8 @@
+2024-12-19 22:19:40,659 message_broker INFO Broker inited 2260125346048
+2024-12-19 22:19:40,684 message_broker INFO Broker connected 2260125346048
+2024-12-19 22:19:40,684 message_broker INFO Sending a message from 2260125346048 to habits_activity_request
+2024-12-19 22:19:40,687 message_broker INFO Message sended from 2260125346048 to habits_activity_request
+2024-12-19 22:19:40,688 message_broker INFO Receiving a response from habits_activity_request_response to 2260125346048
+2024-12-19 22:19:40,688 message_broker INFO Comsume 2260125346048
+2024-12-19 22:19:40,795 message_broker INFO Message received from habits_activity_request_response to 2260125346048
+2024-12-19 22:19:40,797 message_broker INFO Broker closed 2260125346048
