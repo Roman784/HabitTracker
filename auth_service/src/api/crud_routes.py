@@ -8,11 +8,10 @@ from src.services.base_users_service import AbstractUsersService
 from src.schemas.user_schemas import UserCredsSchema
 from src.api.dependencies import users_service
 from src.api.dependencies import get_payload_token
-from src.configs.env_config import get_auth_data
+from src.configs.env_config import AuthData
 
 
 crud_router = APIRouter()
-auth_data = get_auth_data()
 
 
 @crud_router.get('/get', status_code=status.HTTP_200_OK)
@@ -67,5 +66,5 @@ async def delete(
     '''Удаляет пользователя'''
     user_id = payload['id']
     await users_service.delete(user_id)
-    response.delete_cookie(auth_data['access_cookie_name'])
+    response.delete_cookie(AuthData.ACCESS_COOKIE_NAME)
     return { 'message': 'User deleted' }

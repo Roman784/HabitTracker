@@ -7,12 +7,11 @@ from fastapi import APIRouter, Depends, Response, status
 from src.services.base_users_service import AbstractUsersService
 from src.schemas.user_schemas import UserCredsSchema, UserSchema
 from src.api.dependencies import users_service
-from src.configs.env_config import get_auth_data
+from src.configs.env_config import AuthData
 from src.utils.jwt import create_access_token
 
 
 auth_router = APIRouter()
-auth_data = get_auth_data()
 
 
 @auth_router.post('/register', status_code=status.HTTP_201_CREATED)
@@ -45,12 +44,12 @@ async def login_user(
 @auth_router.post('/logout', status_code=status.HTTP_200_OK)
 async def logout_user(response: Response):
     '''Удаляет куку с токеном у пользователя'''
-    response.delete_cookie(auth_data['access_cookie_name'])
+    response.delete_cookie(AuthData.ACCESS_COOKIE_NAME)
     return { 'message': 'User logged out '}
 
 
 def set_token(user: UserSchema, response: Response) -> str:
     '''Создаёт jwt, устанавливает в куки и возвращает его'''
     token = create_access_token({'id': user.id, 'name': user.name})
-    response.set_cookie(auth_data['access_cookie_name'], token)
+    response.set_cookie(AuthData.ACCESS_COOKIE_NAME, token)
     return token

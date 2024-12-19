@@ -5,14 +5,13 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
 from src.models.base_model import BaseModel
 from src.logging.database_logger import DatabaseLogger
-from src.configs.env_config import get_database_data
+from src.configs.env_config import DatabaseData
 
 
-databse_data = get_database_data()
 logger = DatabaseLogger().get_logger()
 
 
-engine = create_async_engine(f'sqlite+aiosqlite:///{databse_data['path']}')
+engine = create_async_engine(f'sqlite+aiosqlite:///{DatabaseData.PATH}')
 db_session = async_sessionmaker(bind=engine, expire_on_commit=False)
 
 

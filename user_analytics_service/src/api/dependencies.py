@@ -5,12 +5,9 @@ from fastapi import Request, Depends, status, HTTPException
 from jwt import decode, PyJWTError
 from datetime import datetime, timezone
 
-from src.configs.env_config import get_auth_data
+from src.configs.env_config import AuthData
 from src.message_broker.base_message_broker import AbstractMessageBroker
 from src.message_broker.rabbitmq_broker import RabbitMQBroker
-
-
-auth_data = get_auth_data()
 
 
 def message_broker()-> AbstractMessageBroker:
@@ -20,7 +17,7 @@ def message_broker()-> AbstractMessageBroker:
 
 def get_token(request: Request):
     '''Проверяет наличие токена и возвращает его'''
-    token = request.cookies.get(auth_data['access_cookie_name'])
+    token = request.cookies.get(AuthData.ACCESS_COOKIE_NAME)
     if not token:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token not found')
     return token
@@ -28,7 +25,7 @@ def get_token(request: Request):
 def get_payload_token(token: str = Depends(get_token)):
     '''Проверяет валидность токена и возвращает его данные.'''
     try:
-        payload = decode(token, auth_data['secret_key'], algorithms=[auth_data['algorithm']])
+        payload = decode(token, AuthData.SECRET_KEY, algorithms=[AuthData.ALGORITHM])
     except PyJWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Token is not valid')
 

@@ -462,3 +462,21 @@
 2024-12-18 00:09:14,148 habits_service INFO Fulfillment is, id: 7, successfully marked
 2024-12-18 00:09:20,570 habits_service INFO Markering the fulfillment of day, id: 7
 2024-12-18 00:09:20,590 habits_service INFO Fulfillment is, id: 7, successfully marked
+2024-12-19 23:18:30,517 habits_service INFO Retrieving all habits of user, id: 1
+2024-12-19 23:18:30,530 habits_service INFO Habits of user, id: 1, successfully retrieved
+2024-12-19 23:18:40,901 habits_service INFO Creating new habit of user, id: 1
+2024-12-19 23:18:40,914 habits_service INFO Creating a new day of habit, id: 5
+2024-12-19 23:18:40,929 habits_service INFO Day of habit, id: 5, successfully created
+2024-12-19 23:18:40,930 habits_service INFO Habit of user, id: 1, successfully created
+2024-12-19 23:18:45,223 habits_service INFO Retrieving all habits of user, id: 1
+2024-12-19 23:18:45,228 habits_service INFO Habits of user, id: 1, successfully retrieved
+2024-12-19 23:20:03,990 habits_service INFO Markering the fulfillment of day, id: 8
+2024-12-19 23:20:04,012 habits_service INFO Fulfillment is, id: 8, successfully marked
+2024-12-19 23:20:13,249 habits_service INFO Markering the fulfillment of day, id: 8
+2024-12-19 23:20:13,270 habits_service INFO Fulfillment is, id: 8, successfully marked
+2024-12-19 23:20:33,987 habits_service INFO Creating new habit of user, id: 1
+2024-12-19 23:20:33,997 habits_service INFO Creating a new day of habit, id: 6
+2024-12-19 23:20:34,009 habits_service INFO Day of habit, id: 6, successfully created
+2024-12-19 23:20:34,010 habits_service INFO Habit of user, id: 1, successfully created
+2024-12-19 23:20:59,403 habits_service INFO Markering the fulfillment of day, id: 9
+2024-12-19 23:20:59,421 habits_service INFO Fulfillment is, id: 9, successfully marked

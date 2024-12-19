@@ -6,3 +6,27 @@
 2024-12-19 22:19:40,688 message_broker INFO Comsume 2260125346048
 2024-12-19 22:19:40,795 message_broker INFO Message received from habits_activity_request_response to 2260125346048
 2024-12-19 22:19:40,797 message_broker INFO Broker closed 2260125346048
+2024-12-19 22:30:51,755 message_broker INFO Broker inited 1631933035008
+2024-12-19 22:30:51,771 message_broker INFO Broker connected 1631933035008
+2024-12-19 22:30:51,772 message_broker INFO Sending a message from 1631933035008 to habits_activity_request
+2024-12-19 22:30:51,775 message_broker INFO Message sended from 1631933035008 to habits_activity_request
+2024-12-19 22:30:51,775 message_broker INFO Receiving a response from habits_activity_request_response to 1631933035008
+2024-12-19 22:30:51,775 message_broker INFO Comsuming 1631933035008
+2024-12-19 22:30:51,890 message_broker INFO Message received from habits_activity_request_response to 1631933035008
+2024-12-19 22:30:51,892 message_broker INFO Broker closed 1631933035008
+2024-12-19 23:20:17,224 message_broker INFO Broker inited 2683493783392
+2024-12-19 23:20:17,242 message_broker INFO Broker connected 2683493783392
+2024-12-19 23:20:17,242 message_broker INFO Sending a message from 2683493783392 to habits_activity_request
+2024-12-19 23:20:17,249 message_broker INFO Message sended from 2683493783392 to habits_activity_request
+2024-12-19 23:20:17,249 message_broker INFO Receiving a response from habits_activity_request_response to 2683493783392
+2024-12-19 23:20:17,249 message_broker INFO Comsuming 2683493783392
+2024-12-19 23:20:17,358 message_broker INFO Message received from habits_activity_request_response to 2683493783392
+2024-12-19 23:20:17,361 message_broker INFO Broker closed 2683493783392
+2024-12-19 23:21:05,494 message_broker INFO Broker inited 2683489118512
+2024-12-19 23:21:05,503 message_broker INFO Broker connected 2683489118512
+2024-12-19 23:21:05,503 message_broker INFO Sending a message from 2683489118512 to habits_activity_request
+2024-12-19 23:21:05,504 message_broker INFO Message sended from 2683489118512 to habits_activity_request
+2024-12-19 23:21:05,505 message_broker INFO Receiving a response from habits_activity_request_response to 2683489118512
+2024-12-19 23:21:05,505 message_broker INFO Comsuming 2683489118512
+2024-12-19 23:21:05,614 message_broker INFO Message received from habits_activity_request_response to 2683489118512
+2024-12-19 23:21:05,617 message_broker INFO Broker closed 2683489118512

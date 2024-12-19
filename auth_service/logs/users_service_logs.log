@@ -106,3 +106,9 @@
 2024-12-18 00:07:49,769 user_service WARNING User, name: vladimir, entered the incorrect password
 2024-12-18 00:07:55,899 user_service INFO Retrieving the user, name: vladimir
 2024-12-18 00:07:55,922 user_service INFO User, name: vladimir, successfully retrieved
+2024-12-19 23:18:09,380 user_service INFO Retrieving the user, name: vladimir
+2024-12-19 23:18:09,414 user_service INFO User, name: vladimir, successfully retrieved
+2024-12-19 23:18:14,003 user_service INFO Retrieving the user, name: roman
+2024-12-19 23:18:14,028 user_service WARNING User, name: roman, entered the incorrect password
+2024-12-19 23:18:19,022 user_service INFO Retrieving the user, name: roman
+2024-12-19 23:18:19,047 user_service INFO User, name: roman, successfully retrieved
