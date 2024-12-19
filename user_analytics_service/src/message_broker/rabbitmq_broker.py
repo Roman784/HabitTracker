@@ -6,9 +6,11 @@ from asyncio import sleep
 from json import dumps, loads
 
 from .base_message_broker import AbstractMessageBroker
+from src.configs.env_config import get_message_broker_data
 from src.logging.message_broker_logger import MessageBrokerLogger
 
 
+message_broker_data = get_message_broker_data()
 logger = MessageBrokerLogger().get_logger()
 
 
@@ -29,7 +31,7 @@ class RabbitMQBroker(AbstractMessageBroker):
 
     async def connect(self):
         '''Подключение, открытие канала'''
-        self.__connection = await connect(host='localhost', port=5672)
+        self.__connection = await connect(host=message_broker_data['host'], port=message_broker_data['port'])
         self.__channel = await self.__connection.channel()
 
         logger.info('Broker connected %d', id(self))

@@ -13,3 +13,17 @@
 2024-12-19 22:19:40,701 message_broker INFO Sending a message from 1925337883728 to habits_activity_request_response
 2024-12-19 22:19:40,701 message_broker INFO Message sended from 1925337883728 to habits_activity_request_response
 2024-12-19 22:19:40,705 message_broker INFO Broker closed 1925337883728
+2024-12-19 22:29:56,147 message_broker INFO Close brokers
+2024-12-19 22:29:56,178 message_broker INFO Broker closed 1925356472320
+2024-12-19 22:29:58,671 message_broker INFO Broker inited 2685070822864
+2024-12-19 22:29:58,696 message_broker INFO Connect brokers
+2024-12-19 22:30:19,503 message_broker INFO Broker inited 1872443821184
+2024-12-19 22:30:19,523 message_broker INFO Connect brokers
+2024-12-19 22:30:19,556 message_broker INFO Broker connected 1872443821184
+2024-12-19 22:30:19,556 message_broker INFO Start comsuming
+2024-12-19 22:30:19,556 message_broker INFO Comsuming 1872443821184
+2024-12-19 22:30:51,789 message_broker INFO Broker inited 1872443257200
+2024-12-19 22:30:51,796 message_broker INFO Broker connected 1872443257200
+2024-12-19 22:30:51,796 message_broker INFO Sending a message from 1872443257200 to habits_activity_request_response
+2024-12-19 22:30:51,798 message_broker INFO Message sended from 1872443257200 to habits_activity_request_response
+2024-12-19 22:30:51,799 message_broker INFO Broker closed 1872443257200
