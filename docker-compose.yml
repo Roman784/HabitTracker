@@ -1,43 +1,57 @@
 services:
-  1_service:
-    build:
-      context: .
-      dockerfile: ./1_service/Dockerfile
-    command: uvicorn main:app --host 0.0.0.0 --reload
-    volumes:
-      - ./1_service:/app
+  nginx:
+    image: nginx:latest
     ports:
-      - 8000:8000
-    environment:
-      - SERVICE_2_URL=http://2_service:8000
-      - SERVICE_3_URL=http://3_service:8000
-      - REDIS_HOST=redis
-  
-  2_service:
-    build:
-      context: .
-      dockerfile: ./2_service/Dockerfile
-    command: uvicorn main:app --host 0.0.0.0 --reload
+      - "8080:8080"
     volumes:
-      - ./2_service:/app
-    ports:
-      - 8002:8000
-    environment:
-      - REDIS_HOST=redis
-  
-  3_service:
-    build:
-      context: .
-      dockerfile: ./3_service/Dockerfile
-    command: uvicorn main:app --host 0.0.0.0 --reload
-    volumes:
-      - ./3_service:/app
-    ports:
-      - 8003:8000
-    environment:
-      - REDIS_HOST=redis
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - auth_service
+      - habit_tracker_service
+      - user_analytics_service
 
-  redis:
-    image: redis:7-alpine
+  auth_service:
+    build:
+      context: ./auth_service
     ports:
-      - 6379:6379
+      - "8000:8000"
+    volumes:
+      - ./auth_service:/src
+    env_file:
+      - ./auth_service/.env
+    depends_on:
+      - rabbitmq
+  
+  habit_tracker_service:
+    build:
+      context: ./habit_tracker_service
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./habit_tracker_service:/src
+    env_file:
+      - ./habit_tracker_service/.env
+    depends_on:
+      - rabbitmq
+  
+  user_analytics_service:
+    build:
+      context: ./user_analytics_service
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./user_analytics_service:/src
+    env_file:
+      - ./user_analytics_service/.env
+    depends_on:
+      - rabbitmq
+  
+  rabbitmq:
+    image: rabbitmq:3.10.7-management
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest

@@ -21,7 +21,11 @@ async def lifespan(_: FastAPI):
     await close_brokers()
 
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(
+    lifespan=lifespan,
+    openapi_url="/api/habits/openapi.json",
+    docs_url="/api/habits/docs"
+    )
 
 
 app.include_router(habits_router, prefix='/api/habits', tags=['habits'])

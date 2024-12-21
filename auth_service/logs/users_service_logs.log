@@ -112,3 +112,27 @@
 2024-12-19 23:18:14,028 user_service WARNING User, name: roman, entered the incorrect password
 2024-12-19 23:18:19,022 user_service INFO Retrieving the user, name: roman
 2024-12-19 23:18:19,047 user_service INFO User, name: roman, successfully retrieved
+2024-12-21 10:13:57,263 user_service INFO Creating new user, name: roman
+2024-12-21 10:13:57,320 user_service WARNING User, name: roman, already exists
+2024-12-21 10:14:15,035 user_service INFO Retrieving the user, name: roman
+2024-12-21 10:14:15,061 user_service INFO User, name: roman, successfully retrieved
+2024-12-21 10:14:19,573 user_service INFO Retrieving the user, id: 1
+2024-12-21 10:14:19,586 user_service INFO User, id: 1, successfully retrieved
+2024-12-21 10:24:51,177 user_service INFO Retrieving the user, name: roman
+2024-12-21 10:24:51,279 user_service INFO User, name: roman, successfully retrieved
+2024-12-21 10:52:26,251 user_service INFO Retrieving the user, name: roman
+2024-12-21 10:52:26,499 user_service INFO User, name: roman, successfully retrieved
+2024-12-21 10:57:57,477 user_service INFO Retrieving the user, id: 1
+2024-12-21 10:57:57,602 user_service INFO User, id: 1, successfully retrieved
+2024-12-21 10:59:18,844 user_service INFO Retrieving the user, id: 1
+2024-12-21 10:59:18,863 user_service INFO User, id: 1, successfully retrieved
+2024-12-21 10:59:52,891 user_service INFO Retrieving the user, name: aboba
+2024-12-21 10:59:52,904 user_service WARNING User, name: aboba, not found
+2024-12-21 11:00:06,370 user_service INFO Retrieving the user, name: aboba
+2024-12-21 11:00:06,389 user_service WARNING User, name: aboba, not found
+2024-12-21 11:00:08,177 user_service INFO Retrieving the user, name: aboba
+2024-12-21 11:00:08,191 user_service WARNING User, name: aboba, not found
+2024-12-21 11:00:12,970 user_service INFO Retrieving the user, name: roman
+2024-12-21 11:00:12,995 user_service WARNING User, name: roman, entered the incorrect password
+2024-12-21 11:00:16,129 user_service INFO Retrieving the user, name: roman
+2024-12-21 11:00:16,151 user_service INFO User, name: roman, successfully retrieved

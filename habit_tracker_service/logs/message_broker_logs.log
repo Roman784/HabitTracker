@@ -60,3 +60,29 @@
 2024-12-19 23:21:05,524 message_broker INFO Broker closed 1975044865776
 2024-12-19 23:21:12,448 message_broker INFO Close brokers
 2024-12-19 23:21:12,450 message_broker INFO Broker closed 1975044049952
+2024-12-21 09:56:39,039 message_broker INFO Broker inited 140654081649472
+2024-12-21 09:56:39,075 message_broker INFO Connect brokers
+2024-12-21 10:03:14,027 message_broker INFO Broker inited 140067193053664
+2024-12-21 10:03:14,066 message_broker INFO Connect brokers
+2024-12-21 10:04:08,931 message_broker INFO Broker inited 140559418665600
+2024-12-21 10:04:08,953 message_broker INFO Connect brokers
+2024-12-21 10:06:02,450 message_broker INFO Broker inited 140328143168928
+2024-12-21 10:06:02,507 message_broker INFO Connect brokers
+2024-12-21 10:12:08,306 message_broker INFO Broker inited 139928630455296
+2024-12-21 10:12:08,363 message_broker INFO Connect brokers
+2024-12-21 10:18:12,133 message_broker INFO Broker inited 140046981900832
+2024-12-21 10:18:12,166 message_broker INFO Connect brokers
+2024-12-21 10:21:42,995 message_broker INFO Broker inited 140293279869568
+2024-12-21 10:21:43,036 message_broker INFO Connect brokers
+2024-12-21 10:26:30,738 message_broker INFO Broker inited 140196494894304
+2024-12-21 10:30:42,248 message_broker INFO Broker inited 140002214274272
+2024-12-21 10:35:18,935 message_broker INFO Broker inited 139626211831024
+2024-12-21 10:39:17,861 message_broker INFO Broker inited 140108751858064
+2024-12-21 10:42:47,827 message_broker INFO Broker inited 140686627891360
+2024-12-21 10:46:35,668 message_broker INFO Broker inited 140249338751136
+2024-12-21 10:48:06,238 message_broker INFO Broker inited 140631474873328
+2024-12-21 10:48:06,276 message_broker INFO Connect brokers
+2024-12-21 10:55:49,501 message_broker INFO Broker inited 140399851350512
+2024-12-21 10:55:49,555 message_broker INFO Connect brokers
+2024-12-21 10:59:09,397 message_broker INFO Broker inited 139937380478192
+2024-12-21 10:59:09,453 message_broker INFO Connect brokers
