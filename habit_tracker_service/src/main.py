@@ -3,7 +3,6 @@
 
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
-import threading
 
 from src.database.database import create_tables, delete_tables
 from src.api.habits_routes import habits_router

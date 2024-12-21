@@ -1,3 +1,6 @@
+networks:
+  dev:
+
 services:
   nginx:
     image: nginx:latest
@@ -9,6 +12,8 @@ services:
       - auth_service
       - habit_tracker_service
       - user_analytics_service
+    networks:
+      - dev
 
   auth_service:
     build:
@@ -21,6 +26,8 @@ services:
       - ./auth_service/.env
     depends_on:
       - rabbitmq
+    networks:
+      - dev
   
   habit_tracker_service:
     build:
@@ -33,6 +40,8 @@ services:
       - ./habit_tracker_service/.env
     depends_on:
       - rabbitmq
+    networks:
+      - dev
   
   user_analytics_service:
     build:
@@ -45,6 +54,8 @@ services:
       - ./user_analytics_service/.env
     depends_on:
       - rabbitmq
+    networks:
+      - dev
   
   rabbitmq:
     image: rabbitmq:3.10.7-management
@@ -52,6 +63,5 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
-    environment:
-      - RABBITMQ_DEFAULT_USER=guest
-      - RABBITMQ_DEFAULT_PASS=guest
+    networks:
+      - dev

@@ -86,3 +86,71 @@
 2024-12-21 10:55:49,555 message_broker INFO Connect brokers
 2024-12-21 10:59:09,397 message_broker INFO Broker inited 139937380478192
 2024-12-21 10:59:09,453 message_broker INFO Connect brokers
+2024-12-21 11:01:58,808 message_broker INFO Broker inited 140631372032544
+2024-12-21 11:01:58,861 message_broker INFO Connect brokers
+2024-12-21 11:05:39,092 message_broker INFO Broker inited 139995440933600
+2024-12-21 11:05:39,121 message_broker INFO Connect brokers
+2024-12-21 11:07:17,156 message_broker INFO Broker inited 139653995948720
+2024-12-21 11:07:17,186 message_broker INFO Connect brokers
+2024-12-21 11:10:55,399 message_broker INFO Broker inited 139837409585264
+2024-12-21 11:10:55,433 message_broker INFO Connect brokers
+2024-12-21 11:17:10,884 message_broker INFO Broker inited 140645628535024
+2024-12-21 14:18:01,107 message_broker INFO Broker inited 2552561061376
+2024-12-21 14:19:53,589 message_broker INFO Close brokers
+2024-12-21 14:19:53,590 message_broker INFO Broker closed 2552561061376
+2024-12-21 14:19:56,009 message_broker INFO Broker inited 2089460758048
+2024-12-21 14:19:57,559 message_broker INFO Close brokers
+2024-12-21 14:19:57,559 message_broker INFO Broker closed 2089460758048
+2024-12-21 14:20:01,030 message_broker INFO Connect brokers
+2024-12-21 11:20:01,417 message_broker INFO Close brokers
+2024-12-21 11:20:01,435 message_broker INFO Broker closed 140645628535024
+2024-12-21 11:20:24,939 message_broker INFO Broker inited 140577697213296
+2024-12-21 11:20:29,993 message_broker INFO Connect brokers
+2024-12-21 11:21:09,801 message_broker INFO Close brokers
+2024-12-21 11:21:09,802 message_broker INFO Broker closed 140577697213296
+2024-12-21 11:25:22,980 message_broker INFO Broker inited 139625373477888
+2024-12-21 11:25:23,005 message_broker INFO Connect brokers
+2024-12-21 11:28:53,779 message_broker INFO Broker inited 140482666752448
+2024-12-21 11:28:53,820 message_broker INFO Connect brokers
+2024-12-21 11:31:02,347 message_broker INFO Broker inited 139706536700496
+2024-12-21 11:31:02,379 message_broker INFO Connect brokers
+2024-12-21 11:31:09,949 message_broker INFO Broker connected 139706536700496
+2024-12-21 11:31:09,949 message_broker INFO Start comsuming
+2024-12-21 11:31:09,950 message_broker INFO Comsuming 139706536700496
+2024-12-21 11:31:47,024 message_broker INFO Broker inited 139706554378544
+2024-12-21 11:31:47,034 message_broker INFO Broker connected 139706554378544
+2024-12-21 11:31:47,035 message_broker INFO Sending a message from 139706554378544 to habits_activity_request_response
+2024-12-21 11:31:47,037 message_broker INFO Message sended from 139706554378544 to habits_activity_request_response
+2024-12-21 11:31:47,040 message_broker INFO Broker closed 139706554378544
+2024-12-21 11:33:55,857 message_broker INFO Broker inited 139635209412176
+2024-12-21 11:33:55,883 message_broker INFO Connect brokers
+2024-12-21 11:33:55,900 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:56,403 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:56,906 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:57,409 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:57,913 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:58,416 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:58,920 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:59,423 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:33:59,927 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:00,430 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:00,933 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:01,436 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:01,940 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:02,444 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:02,948 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:03,451 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:03,954 message_broker WARNING Connection error 139635209412176
+2024-12-21 11:34:04,465 message_broker INFO Broker connected 139635209412176
+2024-12-21 11:34:04,466 message_broker INFO Start comsuming
+2024-12-21 11:34:04,466 message_broker INFO Comsuming 139635209412176
+2024-12-21 11:36:25,639 message_broker INFO Broker inited 139635207966448
+2024-12-21 11:36:25,670 message_broker INFO Broker connected 139635207966448
+2024-12-21 11:36:25,670 message_broker INFO Sending a message from 139635207966448 to habits_activity_request_response
+2024-12-21 11:36:25,675 message_broker INFO Message sended from 139635207966448 to habits_activity_request_response
+2024-12-21 11:36:25,684 message_broker INFO Broker closed 139635207966448
+2024-12-21 11:36:37,636 message_broker INFO Broker inited 139635204869872
+2024-12-21 11:36:37,645 message_broker INFO Broker connected 139635204869872
+2024-12-21 11:36:37,646 message_broker INFO Sending a message from 139635204869872 to habits_activity_request_response
+2024-12-21 11:36:37,648 message_broker INFO Message sended from 139635204869872 to habits_activity_request_response
+2024-12-21 11:36:37,651 message_broker INFO Broker closed 139635204869872

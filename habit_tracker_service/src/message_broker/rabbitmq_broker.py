@@ -30,8 +30,14 @@ class RabbitMQBroker(AbstractMessageBroker):
 
     async def connect(self):
         '''Подключение, открытие канала'''
-        self.__connection = await connect(host=MessageBrokerData.HOST, port=MessageBrokerData.PORT)
-        self.__channel = await self.__connection.channel()
+        while True:
+            try:
+                self.__connection = await connect(host=MessageBrokerData.HOST, port=MessageBrokerData.PORT)
+                self.__channel = await self.__connection.channel()
+                break
+            except:
+                logger.warning('Connection error %d', id(self))
+                await sleep(0.5)
 
         logger.info('Broker connected %d', id(self))
 
