@@ -16,13 +16,13 @@ habits_router = APIRouter()
 @habits_router.put('/mark', status_code=status.HTTP_200_OK)
 async def mark_fulfillment(
     habit_id: int,
-    day_id: int,
+    date: str,
     habits_service: Annotated[AbstractHabitsService, Depends(habits_service)],
     payload: Annotated[any, Depends(get_payload_token)]
 ):
     '''Отмечает выполнение привычки'''
     user_id = payload['id']
-    day_fulfillment, habit_fulfillment = await habits_service.mark_fulfillment(user_id, habit_id, day_id)
+    day_fulfillment, habit_fulfillment = await habits_service.mark_fulfillment(user_id, habit_id, date)
     return { 
         'message': 'Habit marked',
         'day_fulfillment': day_fulfillment,

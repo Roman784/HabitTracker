@@ -24,18 +24,18 @@ class HabitsService(AbstractHabitsService):
         self.habits_calendar_repository: AbstractRepository = habits_calendar_repository()
 
 
-    async def mark_fulfillment(self, user_id: int, habit_id: int, day_id: int):
+    async def mark_fulfillment(self, user_id: int, habit_id: int, date: str):
         '''Отмечает выполнение привычки'''
-        logger.info('Markering the fulfillment of day, id: %d', day_id)
+        logger.info('Markering the fulfillment of day %s, habit id: %d', date, habit_id)
         habit: HabitsModel = await self.check_for_accessibility_and_get(user_id, habit_id)
-        days: List[BaseModel] = await self.habits_calendar_repository.get_by({'habit_id': habit_id, 'id': day_id})
+        days: List[BaseModel] = await self.habits_calendar_repository.get_by({'habit_id': habit_id, 'date': date})
 
         # Получение текущего дня, если его нет - создаётся новый.
         day: HabitsCalendarModel = None
         if len(days) != 0:
             day = days[0]
         else:
-            day_id = await self.create_day_in_calendar(habit_id)
+            day_id = await self.create_day_in_calendar(habit_id, date)
             day = (await self.habits_calendar_repository.get_by({'id': day_id}))[0]
 
         # Увеличение количества выполнений.
@@ -48,10 +48,10 @@ class HabitsService(AbstractHabitsService):
         try:
             await self.habits_calendar_repository.update(day.id, day_dict)
 
-            logger.info('Fulfillment is, id: %d, successfully marked', day.id)
+            logger.info('Fulfillment is, date: %s, habit id: %d, successfully marked', date, habit_id)
             return day.fulfillment, habit.fulfillment
         except ValueError as e:
-            logger.warning('Day, id: %d, not found', day.id)
+            logger.warning('Day %s, habit id: %d not found', date, habit_id)
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
 
 
@@ -61,8 +61,9 @@ class HabitsService(AbstractHabitsService):
 
         habit_dict = data.model_dump()
         habit_id = await self.habits_repository.create(habit_dict)
+        today = str(date.today())
 
-        await self.create_day_in_calendar(habit_id)
+        await self.create_day_in_calendar(habit_id, today)
 
         logger.info('Habit of user, id: %d, successfully created', data.user_id)
         return habit_id
@@ -145,12 +146,12 @@ class HabitsService(AbstractHabitsService):
         return habits[0]
 
 
-    async def create_day_in_calendar(self, habit_id: int) -> int:
+    async def create_day_in_calendar(self, habit_id: int, date: str) -> int:
         '''Создаёт запись в бд календаря с сегодняшней датой'''
         logger.info('Creating a new day of habit, id: %d', habit_id)
         day: HabitsCalendarSchema = HabitsCalendarSchema(
             habit_id=habit_id,
-            date=str(date.today()),
+            date=date,
             fulfillment=0
         )
 

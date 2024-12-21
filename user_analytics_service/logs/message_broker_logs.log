@@ -80,3 +80,51 @@
 2024-12-21 11:36:37,624 message_broker INFO Comsuming 139953171993264
 2024-12-21 11:36:37,729 message_broker INFO Message received from habits_activity_request_response to 139953171993264
 2024-12-21 11:36:37,733 message_broker INFO Broker closed 139953171993264
+2024-12-21 11:43:06,413 message_broker INFO Broker inited 140082923489952
+2024-12-21 11:43:06,431 message_broker INFO Broker connected 140082923489952
+2024-12-21 11:43:06,432 message_broker INFO Sending a message from 140082923489952 to habits_activity_request
+2024-12-21 11:43:06,434 message_broker INFO Message sended from 140082923489952 to habits_activity_request
+2024-12-21 11:43:06,434 message_broker INFO Receiving a response from habits_activity_request_response to 140082923489952
+2024-12-21 11:43:06,435 message_broker INFO Comsuming 140082923489952
+2024-12-21 11:43:06,543 message_broker INFO Message received from habits_activity_request_response to 140082923489952
+2024-12-21 11:43:06,548 message_broker INFO Broker closed 140082923489952
+2024-12-21 11:44:12,917 message_broker INFO Broker inited 140082970873056
+2024-12-21 11:44:12,928 message_broker INFO Broker connected 140082970873056
+2024-12-21 11:44:12,929 message_broker INFO Sending a message from 140082970873056 to habits_activity_request
+2024-12-21 11:44:12,930 message_broker INFO Message sended from 140082970873056 to habits_activity_request
+2024-12-21 11:44:12,931 message_broker INFO Receiving a response from habits_activity_request_response to 140082970873056
+2024-12-21 11:44:12,931 message_broker INFO Comsuming 140082970873056
+2024-12-21 11:44:13,034 message_broker INFO Message received from habits_activity_request_response to 140082970873056
+2024-12-21 11:44:13,037 message_broker INFO Broker closed 140082970873056
+2024-12-21 11:47:34,946 message_broker INFO Broker inited 140387058206960
+2024-12-21 11:47:34,963 message_broker INFO Broker connected 140387058206960
+2024-12-21 11:47:34,963 message_broker INFO Sending a message from 140387058206960 to habits_activity_request
+2024-12-21 11:47:34,965 message_broker INFO Message sended from 140387058206960 to habits_activity_request
+2024-12-21 11:47:34,965 message_broker INFO Receiving a response from habits_activity_request_response to 140387058206960
+2024-12-21 11:47:34,966 message_broker INFO Comsuming 140387058206960
+2024-12-21 11:47:35,072 message_broker INFO Message received from habits_activity_request_response to 140387058206960
+2024-12-21 11:47:35,076 message_broker INFO Broker closed 140387058206960
+2024-12-21 11:48:36,066 message_broker INFO Broker inited 140387070004880
+2024-12-21 11:48:36,092 message_broker INFO Broker connected 140387070004880
+2024-12-21 11:48:36,092 message_broker INFO Sending a message from 140387070004880 to habits_activity_request
+2024-12-21 11:48:36,097 message_broker INFO Message sended from 140387070004880 to habits_activity_request
+2024-12-21 11:48:36,098 message_broker INFO Receiving a response from habits_activity_request_response to 140387070004880
+2024-12-21 11:48:36,098 message_broker INFO Comsuming 140387070004880
+2024-12-21 11:48:36,203 message_broker INFO Message received from habits_activity_request_response to 140387070004880
+2024-12-21 11:48:36,207 message_broker INFO Broker closed 140387070004880
+2024-12-21 11:52:36,461 message_broker INFO Broker inited 140419924102512
+2024-12-21 11:52:36,478 message_broker INFO Broker connected 140419924102512
+2024-12-21 11:52:36,478 message_broker INFO Sending a message from 140419924102512 to habits_activity_request
+2024-12-21 11:52:36,479 message_broker INFO Message sended from 140419924102512 to habits_activity_request
+2024-12-21 11:52:36,480 message_broker INFO Receiving a response from habits_activity_request_response to 140419924102512
+2024-12-21 11:52:36,480 message_broker INFO Comsuming 140419924102512
+2024-12-21 11:52:36,589 message_broker INFO Message received from habits_activity_request_response to 140419924102512
+2024-12-21 11:52:36,593 message_broker INFO Broker closed 140419924102512
+2024-12-21 11:52:56,105 message_broker INFO Broker inited 140419924105488
+2024-12-21 11:52:56,117 message_broker INFO Broker connected 140419924105488
+2024-12-21 11:52:56,117 message_broker INFO Sending a message from 140419924105488 to habits_activity_request
+2024-12-21 11:52:56,119 message_broker INFO Message sended from 140419924105488 to habits_activity_request
+2024-12-21 11:52:56,120 message_broker INFO Receiving a response from habits_activity_request_response to 140419924105488
+2024-12-21 11:52:56,120 message_broker INFO Comsuming 140419924105488
+2024-12-21 11:52:56,224 message_broker INFO Message received from habits_activity_request_response to 140419924105488
+2024-12-21 11:52:56,227 message_broker INFO Broker closed 140419924105488
