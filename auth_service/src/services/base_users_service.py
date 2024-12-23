@@ -20,7 +20,7 @@ class AbstractUsersService(ABC):
 
     @abstractmethod
     async def get_by_creds() -> UserModel:
-        '''Возвращает данные пользователя по id'''
+        '''Возвращает данные пользователя по имени и паролю'''
         raise NotImplemented
 
     @abstractmethod

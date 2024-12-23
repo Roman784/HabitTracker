@@ -6,8 +6,7 @@ from fastapi import APIRouter, Depends, status
 
 from src.services.base_habits_service import AbstractHabitsService
 from src.schemas.habits_schemas import HabitCredsSchema, HabitAddSchema
-from src.api.dependencies import habits_service
-from src.api.dependencies import get_payload_token
+from src.api.dependencies import habits_service, get_payload_token
 
 
 habits_router = APIRouter()
