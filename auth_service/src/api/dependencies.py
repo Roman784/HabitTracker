@@ -9,11 +9,18 @@ from src.services.users_service import UsersService
 from src.repositories.users_repository import UsersRepository
 from src.services.base_users_service import AbstractUsersService
 from src.configs.env_config import AuthData
+from src.message_broker.base_message_broker import AbstractMessageBroker
+from src.message_broker.rabbitmq_broker import RabbitMQBroker
 
 
 def users_service() -> AbstractUsersService:
     '''Возвращает сервис для работы с пользователями'''
     return UsersService(UsersRepository)
+
+
+def message_broker()-> AbstractMessageBroker:
+    '''Возвращает текущий брокер сообщений'''
+    return RabbitMQBroker()
 
 
 def get_token(request: Request):

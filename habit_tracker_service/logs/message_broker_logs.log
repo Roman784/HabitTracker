@@ -290,3 +290,448 @@
 2024-12-21 11:52:56,148 message_broker INFO Broker closed 139741375985664
 2024-12-21 11:53:06,891 message_broker INFO Close brokers
 2024-12-21 11:53:06,894 message_broker INFO Broker closed 139741375900384
+2024-12-23 19:25:41,708 message_broker INFO Broker inited 139848660079280
+2024-12-23 19:25:41,738 message_broker INFO Connect brokers
+2024-12-23 19:25:41,754 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:42,258 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:42,761 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:43,264 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:43,766 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:44,269 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:44,773 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:45,275 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:45,778 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:46,282 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:46,785 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:47,289 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:47,792 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:48,296 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:48,799 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:49,302 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:49,805 message_broker WARNING Connection error 139848660079280
+2024-12-23 19:25:50,315 message_broker INFO Broker connected 139848660079280
+2024-12-23 19:25:50,315 message_broker INFO Start comsuming
+2024-12-23 19:25:50,315 message_broker INFO Comsuming 139848660079280
+2024-12-23 19:26:59,720 message_broker INFO Broker inited 139848658759136
+2024-12-23 19:26:59,728 message_broker INFO Broker connected 139848658759136
+2024-12-23 19:26:59,728 message_broker INFO Sending a message from 139848658759136 to habits_activity_request_response
+2024-12-23 19:26:59,730 message_broker INFO Message sended from 139848658759136 to habits_activity_request_response
+2024-12-23 19:26:59,734 message_broker INFO Broker closed 139848658759136
+2024-12-23 19:27:50,896 message_broker INFO Broker inited 139848658596400
+2024-12-23 19:27:50,911 message_broker INFO Broker connected 139848658596400
+2024-12-23 19:27:50,912 message_broker INFO Sending a message from 139848658596400 to habits_activity_request_response
+2024-12-23 19:27:50,913 message_broker INFO Message sended from 139848658596400 to habits_activity_request_response
+2024-12-23 19:27:50,920 message_broker INFO Broker closed 139848658596400
+2024-12-23 19:28:10,740 message_broker INFO Close brokers
+2024-12-23 19:28:10,745 message_broker INFO Broker closed 139848660079280
+2024-12-24 07:10:05,203 message_broker INFO Broker inited 139785153814912
+2024-12-24 07:10:05,204 message_broker INFO Broker inited 139785139927376
+2024-12-24 07:10:05,240 message_broker INFO Connect brokers
+2024-12-24 07:10:05,256 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:05,759 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:06,262 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:06,765 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:07,268 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:07,771 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:08,269 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:08,772 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:09,275 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:09,778 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:10,282 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:10,786 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:11,289 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:11,792 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:12,295 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:12,799 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:13,302 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:13,806 message_broker WARNING Connection error 139785153814912
+2024-12-24 07:10:14,318 message_broker INFO Broker connected 139785153814912
+2024-12-24 07:10:14,330 message_broker INFO Broker connected 139785139927376
+2024-12-24 07:10:14,331 message_broker INFO Start comsuming
+2024-12-24 07:10:14,331 message_broker INFO Comsuming 139785153814912
+2024-12-24 07:10:14,359 message_broker INFO Comsuming 139785139927376
+2024-12-24 07:12:52,272 message_broker INFO Close brokers
+2024-12-24 07:12:52,277 message_broker INFO Broker closed 139785153814912
+2024-12-24 07:12:52,285 message_broker INFO Broker closed 139785139927376
+2024-12-24 07:16:03,372 message_broker INFO Broker inited 140516349057872
+2024-12-24 07:16:03,373 message_broker INFO Broker inited 140516363258048
+2024-12-24 07:16:03,409 message_broker INFO Connect brokers
+2024-12-24 07:16:03,417 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:03,920 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:04,423 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:04,926 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:05,429 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:05,932 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:06,435 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:06,937 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:07,440 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:07,943 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:08,446 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:08,949 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:09,455 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:09,958 message_broker WARNING Connection error 140516349057872
+2024-12-24 07:16:10,468 message_broker INFO Broker connected 140516349057872
+2024-12-24 07:16:10,478 message_broker INFO Broker connected 140516363258048
+2024-12-24 07:16:10,479 message_broker INFO Start comsuming
+2024-12-24 07:16:10,479 message_broker INFO Comsuming 140516349057872
+2024-12-24 07:16:10,487 message_broker INFO Comsuming 140516363258048
+2024-12-24 07:16:52,158 message_broker INFO Broker inited 140516346895760
+2024-12-24 07:16:52,167 message_broker INFO Broker connected 140516346895760
+2024-12-24 07:16:52,169 message_broker INFO Sending a message from 140516346895760 to delete_user_habits_request_response
+2024-12-24 07:16:52,171 message_broker INFO Message sended from 140516346895760 to delete_user_habits_request_response
+2024-12-24 07:16:52,174 message_broker INFO Broker closed 140516346895760
+2024-12-24 07:17:53,090 message_broker INFO Close brokers
+2024-12-24 07:17:53,094 message_broker INFO Broker closed 140516349057872
+2024-12-24 07:17:53,099 message_broker INFO Broker closed 140516363258048
+2024-12-24 07:18:09,684 message_broker INFO Broker inited 139831902334192
+2024-12-24 07:18:09,684 message_broker INFO Broker inited 139831902323920
+2024-12-24 07:18:09,710 message_broker INFO Connect brokers
+2024-12-24 07:18:09,717 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:10,220 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:10,723 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:11,226 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:11,729 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:12,232 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:12,735 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:13,238 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:13,741 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:14,245 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:14,748 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:15,251 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:15,755 message_broker WARNING Connection error 139831902334192
+2024-12-24 07:18:16,265 message_broker INFO Broker connected 139831902334192
+2024-12-24 07:18:16,275 message_broker INFO Broker connected 139831902323920
+2024-12-24 07:18:16,275 message_broker INFO Start comsuming
+2024-12-24 07:18:16,276 message_broker INFO Comsuming 139831902334192
+2024-12-24 07:18:16,282 message_broker INFO Comsuming 139831902323920
+2024-12-24 07:19:37,152 message_broker INFO Broker inited 139831902568528
+2024-12-24 07:19:37,166 message_broker INFO Broker connected 139831902568528
+2024-12-24 07:19:37,168 message_broker INFO Sending a message from 139831902568528 to delete_user_habits_request_response
+2024-12-24 07:19:37,179 message_broker INFO Message sended from 139831902568528 to delete_user_habits_request_response
+2024-12-24 07:19:37,196 message_broker INFO Broker closed 139831902568528
+2024-12-24 10:21:20,887 message_broker INFO Broker inited 2434167392880
+2024-12-24 10:21:20,887 message_broker INFO Broker inited 2434167393888
+2024-12-24 10:21:20,898 message_broker INFO Connect brokers
+2024-12-24 10:21:23,191 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:25,985 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:28,784 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:31,582 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:34,388 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:37,168 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:39,975 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:42,782 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:45,570 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:48,373 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:51,186 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:53,992 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:56,779 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:21:59,580 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:02,375 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:05,161 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:07,959 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:10,759 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:13,560 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:16,366 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:19,136 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:21,927 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:24,730 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:27,531 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:30,333 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:33,118 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:35,907 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:38,699 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:41,505 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:44,311 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:47,114 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:49,927 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:52,724 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:55,507 message_broker WARNING Connection error 2434167392880
+2024-12-24 10:22:59,601 message_broker INFO Broker inited 1679458536624
+2024-12-24 10:22:59,601 message_broker INFO Broker inited 1679458116784
+2024-12-24 10:22:59,612 message_broker INFO Connect brokers
+2024-12-24 10:23:01,910 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:04,704 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:07,505 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:10,309 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:13,091 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:15,898 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:18,688 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:21,483 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:24,278 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:27,078 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:29,881 message_broker WARNING Connection error 1679458536624
+2024-12-24 07:23:31,567 message_broker INFO Close brokers
+2024-12-24 07:23:31,571 message_broker INFO Broker closed 139831902334192
+2024-12-24 07:23:31,575 message_broker INFO Broker closed 139831902323920
+2024-12-24 10:23:32,692 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:35,469 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:38,267 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:41,063 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:43,869 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:46,659 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:49,459 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:52,264 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:55,076 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:23:57,883 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:24:00,689 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:24:03,493 message_broker WARNING Connection error 1679458536624
+2024-12-24 10:24:22,015 message_broker INFO Broker inited 2449601105312
+2024-12-24 10:24:22,015 message_broker INFO Broker inited 2449599342176
+2024-12-24 10:24:22,026 message_broker INFO Connect brokers
+2024-12-24 10:24:24,317 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:27,102 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:29,896 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:32,698 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:35,512 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:38,317 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:41,093 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:43,889 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:46,672 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:49,459 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:52,266 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:55,106 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:24:57,877 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:00,668 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:03,459 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:06,265 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:09,060 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:11,869 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:14,682 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:17,477 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:20,272 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:23,051 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:25,850 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:28,634 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:31,437 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:34,231 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:37,034 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:39,841 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:42,622 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:45,415 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:48,209 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:50,993 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:53,797 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:56,603 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:25:59,386 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:02,188 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:04,991 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:07,795 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:10,594 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:13,390 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:16,191 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:18,988 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:21,786 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:24,591 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:27,372 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:30,184 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:32,984 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:35,791 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:38,594 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:41,397 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:44,195 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:47,004 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:49,809 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:52,615 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:55,425 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:26:58,233 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:01,038 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:03,830 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:06,628 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:09,415 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:12,220 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:15,023 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:17,828 message_broker WARNING Connection error 2449601105312
+2024-12-24 10:27:45,907 message_broker INFO Broker inited 1822631038800
+2024-12-24 10:27:45,908 message_broker INFO Broker inited 1822629996128
+2024-12-24 10:27:45,918 message_broker INFO Connect brokers
+2024-12-24 10:27:45,961 message_broker INFO Broker connected 1822631038800
+2024-12-24 10:27:45,970 message_broker INFO Broker connected 1822629996128
+2024-12-24 10:27:45,970 message_broker INFO Start comsuming
+2024-12-24 10:27:45,970 message_broker INFO Comsuming 1822631038800
+2024-12-24 10:27:45,976 message_broker INFO Comsuming 1822629996128
+2024-12-24 10:28:30,171 message_broker INFO Broker inited 1822631310832
+2024-12-24 10:28:30,177 message_broker INFO Broker connected 1822631310832
+2024-12-24 10:28:30,177 message_broker INFO Sending a message from 1822631310832 to delete_user_habits_request_response
+2024-12-24 10:28:30,178 message_broker INFO Message sended from 1822631310832 to delete_user_habits_request_response
+2024-12-24 10:28:30,179 message_broker INFO Broker closed 1822631310832
+2024-12-24 10:31:09,812 message_broker INFO Close brokers
+2024-12-24 10:31:09,814 message_broker INFO Broker closed 1822631038800
+2024-12-24 10:31:09,816 message_broker INFO Broker closed 1822629996128
+2024-12-24 10:31:11,731 message_broker INFO Broker inited 2187341302528
+2024-12-24 10:31:11,731 message_broker INFO Broker inited 2187341304160
+2024-12-24 10:31:11,742 message_broker INFO Connect brokers
+2024-12-24 10:31:11,755 message_broker INFO Broker connected 2187341302528
+2024-12-24 10:31:11,761 message_broker INFO Broker connected 2187341304160
+2024-12-24 10:31:11,761 message_broker INFO Start comsuming
+2024-12-24 10:31:11,761 message_broker INFO Comsuming 2187341302528
+2024-12-24 10:31:11,763 message_broker INFO Comsuming 2187341304160
+2024-12-24 10:31:18,320 message_broker INFO Broker inited 2187339418992
+2024-12-24 10:31:18,325 message_broker INFO Broker connected 2187339418992
+2024-12-24 10:31:18,326 message_broker INFO Sending a message from 2187339418992 to delete_user_habits_request_response
+2024-12-24 10:31:18,327 message_broker INFO Message sended from 2187339418992 to delete_user_habits_request_response
+2024-12-24 10:31:18,328 message_broker INFO Broker closed 2187339418992
+2024-12-24 10:31:47,462 message_broker INFO Broker inited 2187341592528
+2024-12-24 10:31:47,467 message_broker INFO Broker connected 2187341592528
+2024-12-24 10:31:47,468 message_broker INFO Sending a message from 2187341592528 to delete_user_habits_request_response
+2024-12-24 10:31:47,469 message_broker INFO Message sended from 2187341592528 to delete_user_habits_request_response
+2024-12-24 10:31:47,471 message_broker INFO Broker closed 2187341592528
+2024-12-24 10:33:06,216 message_broker INFO Close brokers
+2024-12-24 10:33:06,218 message_broker INFO Broker closed 2187341302528
+2024-12-24 10:33:06,220 message_broker INFO Broker closed 2187341304160
+2024-12-24 10:33:08,118 message_broker INFO Broker inited 2061058756720
+2024-12-24 10:33:08,119 message_broker INFO Broker inited 2061058755520
+2024-12-24 10:33:08,130 message_broker INFO Connect brokers
+2024-12-24 10:33:08,143 message_broker INFO Broker connected 2061058756720
+2024-12-24 10:33:08,149 message_broker INFO Broker connected 2061058755520
+2024-12-24 10:33:08,149 message_broker INFO Start comsuming
+2024-12-24 10:33:08,149 message_broker INFO Comsuming 2061058756720
+2024-12-24 10:33:08,151 message_broker INFO Comsuming 2061058755520
+2024-12-24 10:33:09,571 message_broker INFO Broker inited 2061059010592
+2024-12-24 10:33:09,576 message_broker INFO Broker connected 2061059010592
+2024-12-24 10:33:09,577 message_broker INFO Sending a message from 2061059010592 to delete_user_habits_request_response
+2024-12-24 10:33:09,578 message_broker INFO Message sended from 2061059010592 to delete_user_habits_request_response
+2024-12-24 10:33:09,580 message_broker INFO Broker closed 2061059010592
+2024-12-24 10:34:11,306 message_broker INFO Close brokers
+2024-12-24 10:34:11,308 message_broker INFO Broker closed 2061058756720
+2024-12-24 10:34:11,310 message_broker INFO Broker closed 2061058755520
+2024-12-24 10:34:13,147 message_broker INFO Broker inited 2215966476912
+2024-12-24 10:34:13,147 message_broker INFO Broker inited 2215965793728
+2024-12-24 10:34:13,158 message_broker INFO Connect brokers
+2024-12-24 10:34:13,170 message_broker INFO Broker connected 2215966476912
+2024-12-24 10:34:13,176 message_broker INFO Broker connected 2215965793728
+2024-12-24 10:34:13,177 message_broker INFO Start comsuming
+2024-12-24 10:34:13,177 message_broker INFO Comsuming 2215966476912
+2024-12-24 10:34:13,178 message_broker INFO Comsuming 2215965793728
+2024-12-24 10:34:15,536 message_broker INFO Broker inited 2215966732032
+2024-12-24 10:34:15,543 message_broker INFO Broker connected 2215966732032
+2024-12-24 10:34:15,544 message_broker INFO Sending a message from 2215966732032 to delete_user_habits_request_response
+2024-12-24 10:34:15,545 message_broker INFO Message sended from 2215966732032 to delete_user_habits_request_response
+2024-12-24 10:34:15,547 message_broker INFO Broker closed 2215966732032
+2024-12-24 10:34:29,436 message_broker INFO Close brokers
+2024-12-24 10:34:29,438 message_broker INFO Broker closed 2215966476912
+2024-12-24 10:34:29,440 message_broker INFO Broker closed 2215965793728
+2024-12-24 10:34:31,142 message_broker INFO Broker inited 1929197784528
+2024-12-24 10:34:31,142 message_broker INFO Broker inited 1929197533232
+2024-12-24 10:34:31,153 message_broker INFO Connect brokers
+2024-12-24 10:34:31,168 message_broker INFO Broker connected 1929197784528
+2024-12-24 10:34:31,174 message_broker INFO Broker connected 1929197533232
+2024-12-24 10:34:31,174 message_broker INFO Start comsuming
+2024-12-24 10:34:31,174 message_broker INFO Comsuming 1929197784528
+2024-12-24 10:34:31,176 message_broker INFO Comsuming 1929197533232
+2024-12-24 10:34:32,510 message_broker INFO Broker inited 1929198038400
+2024-12-24 10:34:32,517 message_broker INFO Broker connected 1929198038400
+2024-12-24 10:34:32,579 message_broker INFO Sending a message from 1929198038400 to delete_user_habits_request_response
+2024-12-24 10:34:32,580 message_broker INFO Message sended from 1929198038400 to delete_user_habits_request_response
+2024-12-24 10:34:32,582 message_broker INFO Broker closed 1929198038400
+2024-12-24 10:35:56,487 message_broker INFO Close brokers
+2024-12-24 10:35:56,489 message_broker INFO Broker closed 1929197784528
+2024-12-24 10:35:56,491 message_broker INFO Broker closed 1929197533232
+2024-12-24 07:36:34,274 message_broker INFO Broker inited 140712941235008
+2024-12-24 07:36:34,274 message_broker INFO Broker inited 140712943627408
+2024-12-24 07:36:34,300 message_broker INFO Connect brokers
+2024-12-24 07:36:34,310 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:34,814 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:35,317 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:35,819 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:36,322 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:36,825 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:37,329 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:37,832 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:38,332 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:38,835 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:39,338 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:39,841 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:40,344 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:40,847 message_broker WARNING Connection error 140712941235008
+2024-12-24 07:36:41,357 message_broker INFO Broker connected 140712941235008
+2024-12-24 07:36:41,371 message_broker INFO Broker connected 140712943627408
+2024-12-24 07:36:41,372 message_broker INFO Start comsuming
+2024-12-24 07:36:41,372 message_broker INFO Comsuming 140712941235008
+2024-12-24 07:36:41,381 message_broker INFO Comsuming 140712943627408
+2024-12-24 07:39:19,240 message_broker INFO Broker inited 140712943776208
+2024-12-24 07:39:19,246 message_broker INFO Broker connected 140712943776208
+2024-12-24 07:39:19,246 message_broker INFO Sending a message from 140712943776208 to habits_activity_request_response
+2024-12-24 07:39:19,248 message_broker INFO Message sended from 140712943776208 to habits_activity_request_response
+2024-12-24 07:39:19,250 message_broker INFO Broker closed 140712943776208
+2024-12-24 07:39:42,379 message_broker INFO Broker inited 140712941668592
+2024-12-24 07:39:42,388 message_broker INFO Broker connected 140712941668592
+2024-12-24 07:39:42,388 message_broker INFO Sending a message from 140712941668592 to habits_activity_request_response
+2024-12-24 07:39:42,390 message_broker INFO Message sended from 140712941668592 to habits_activity_request_response
+2024-12-24 07:39:42,392 message_broker INFO Broker closed 140712941668592
+2024-12-24 07:39:50,631 message_broker INFO Broker inited 140712931864608
+2024-12-24 07:39:50,640 message_broker INFO Broker connected 140712931864608
+2024-12-24 07:39:50,641 message_broker INFO Sending a message from 140712931864608 to habits_activity_request_response
+2024-12-24 07:39:50,642 message_broker INFO Message sended from 140712931864608 to habits_activity_request_response
+2024-12-24 07:39:50,644 message_broker INFO Broker closed 140712931864608
+2024-12-24 07:40:01,563 message_broker INFO Broker inited 140712941494080
+2024-12-24 07:40:01,574 message_broker INFO Broker connected 140712941494080
+2024-12-24 07:40:01,744 message_broker INFO Sending a message from 140712941494080 to delete_user_habits_request_response
+2024-12-24 07:40:01,746 message_broker INFO Message sended from 140712941494080 to delete_user_habits_request_response
+2024-12-24 07:40:01,749 message_broker INFO Broker closed 140712941494080
+2024-12-24 07:40:58,213 message_broker INFO Broker inited 140712944069824
+2024-12-24 07:40:58,222 message_broker INFO Broker connected 140712944069824
+2024-12-24 07:40:58,223 message_broker INFO Sending a message from 140712944069824 to habits_activity_request_response
+2024-12-24 07:40:58,224 message_broker INFO Message sended from 140712944069824 to habits_activity_request_response
+2024-12-24 07:40:58,226 message_broker INFO Broker closed 140712944069824
+2024-12-24 07:42:20,067 message_broker INFO Close brokers
+2024-12-24 07:42:20,071 message_broker INFO Broker closed 140712941235008
+2024-12-24 07:42:20,075 message_broker INFO Broker closed 140712943627408
+2024-12-24 07:42:37,598 message_broker INFO Broker inited 139660650619504
+2024-12-24 07:42:37,598 message_broker INFO Broker inited 139660650624976
+2024-12-24 07:42:37,622 message_broker INFO Connect brokers
+2024-12-24 07:42:37,629 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:38,132 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:38,634 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:39,137 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:39,640 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:40,143 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:40,647 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:41,150 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:41,654 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:42,156 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:42,670 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:43,173 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:43,676 message_broker WARNING Connection error 139660650619504
+2024-12-24 07:42:44,187 message_broker INFO Broker connected 139660650619504
+2024-12-24 07:42:44,194 message_broker INFO Broker connected 139660650624976
+2024-12-24 07:42:44,195 message_broker INFO Start comsuming
+2024-12-24 07:42:44,195 message_broker INFO Comsuming 139660650619504
+2024-12-24 07:42:44,201 message_broker INFO Comsuming 139660650624976
+2024-12-24 07:42:44,313 message_broker INFO Broker inited 139660651593120
+2024-12-24 07:42:44,321 message_broker INFO Broker connected 139660651593120
+2024-12-24 07:42:44,340 message_broker INFO Sending a message from 139660651593120 to delete_user_habits_request_response
+2024-12-24 07:42:44,342 message_broker INFO Message sended from 139660651593120 to delete_user_habits_request_response
+2024-12-24 07:42:44,343 message_broker INFO Broker closed 139660651593120
+2024-12-24 07:43:51,659 message_broker INFO Broker inited 139660647532688
+2024-12-24 07:43:51,667 message_broker INFO Broker connected 139660647532688
+2024-12-24 07:43:51,681 message_broker INFO Sending a message from 139660647532688 to delete_user_habits_request_response
+2024-12-24 07:43:51,682 message_broker INFO Message sended from 139660647532688 to delete_user_habits_request_response
+2024-12-24 07:43:51,684 message_broker INFO Broker closed 139660647532688
+2024-12-24 07:44:06,111 message_broker INFO Close brokers
+2024-12-24 07:44:06,115 message_broker INFO Broker closed 139660650619504
+2024-12-24 07:44:06,119 message_broker INFO Broker closed 139660650624976
+2024-12-24 07:44:21,565 message_broker INFO Broker inited 140207074551584
+2024-12-24 07:44:21,565 message_broker INFO Broker inited 140207079223904
+2024-12-24 07:44:21,590 message_broker INFO Connect brokers
+2024-12-24 07:44:21,595 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:22,099 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:22,602 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:23,105 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:23,608 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:24,111 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:24,614 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:25,117 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:25,619 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:26,122 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:26,625 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:27,128 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:27,631 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:28,134 message_broker WARNING Connection error 140207074551584
+2024-12-24 07:44:28,643 message_broker INFO Broker connected 140207074551584
+2024-12-24 07:44:28,652 message_broker INFO Broker connected 140207079223904
+2024-12-24 07:44:28,652 message_broker INFO Start comsuming
+2024-12-24 07:44:28,653 message_broker INFO Comsuming 140207074551584
+2024-12-24 07:44:28,659 message_broker INFO Comsuming 140207079223904
+2024-12-24 07:45:10,074 message_broker INFO Close brokers
+2024-12-24 07:45:10,078 message_broker INFO Broker closed 140207074551584
+2024-12-24 07:45:10,080 message_broker INFO Broker closed 140207079223904

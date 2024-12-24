@@ -16,4 +16,18 @@ async def on_habits_activity(message: IncomingMessage):
         await broker.connect()
         await broker.send_message(message.reply_to, {'activities': activities})
         await broker.close()
-    
+
+
+async def on_delete_user_habits(message: IncomingMessage):
+    async with message.process():
+        broker = message_broker()
+        await broker.connect()
+        try:
+            user_id = loads(message.body)['user_id']
+            service = habits_service()
+            await service.delete_all(user_id)
+
+            await broker.send_message(message.reply_to, {'status': 'ok'})
+        except:
+            await broker.send_message(message.reply_to, {'status': 'error'})
+        await broker.close()

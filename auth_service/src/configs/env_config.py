@@ -20,7 +20,16 @@ class AuthData:
     ACCESS_COOKIE_NAME = getenv('JWT_ACCESS_COOKIE_NAME')
 
 
+class MessageBrokerData:
+    '''Константы данных для брокера сообщений'''
+    HOST = getenv('MESSAGE_BROKER_HOST')
+    PORT = int(getenv('MESSAGE_BROKER_PORT'))
+    USER = getenv('MESSAGE_BROKER_USER')
+    PASSWORD = getenv('MESSAGE_BROKER_PASSWORD')
+
+
 class LogsData:
     '''Константы данных для логгирования'''
     DATABASE_FILE_PATH = getenv('DATABASE_LOGS_FILE')
-    USERS_SERVICE_LOGS_FILE = getenv('USERS_SERVICE_LOGS_FILE')
+    USERS_SERVICE_FILE_PATH = getenv('USERS_SERVICE_LOGS_FILE')
+    MESSAGE_BROKER_FILE_PATH = getenv('MESSAGE_BROKER_LOGS_FILE')

@@ -7,8 +7,9 @@ from fastapi import APIRouter, Depends, Response, status
 from src.services.base_users_service import AbstractUsersService
 from src.schemas.user_schemas import UserCredsSchema
 from src.api.dependencies import users_service
-from src.api.dependencies import get_payload_token
+from src.api.dependencies import get_payload_token, message_broker
 from src.configs.env_config import AuthData
+from src.message_broker.base_message_broker import AbstractMessageBroker
 
 
 crud_router = APIRouter()
@@ -61,10 +62,20 @@ async def update(
 async def delete(
     users_service: Annotated[AbstractUsersService, Depends(users_service)],
     payload: Annotated[any, Depends(get_payload_token)],
+    broker: Annotated[AbstractMessageBroker, Depends(message_broker)],
     response: Response
 ):
     '''Удаляет пользователя'''
     user_id = payload['id']
-    await users_service.delete(user_id)
-    response.delete_cookie(AuthData.ACCESS_COOKIE_NAME)
-    return { 'message': 'User deleted' }
+
+    await broker.connect()
+    reply_to = await broker.send_message('delete_user_habits_request', {'user_id': user_id})
+    result = await broker.get_response(reply_to)
+    await broker.close()
+
+    if (result['status'] == 'ok'):
+        await users_service.delete(user_id)
+        response.delete_cookie(AuthData.ACCESS_COOKIE_NAME)
+        return { 'message': 'User deleted' }
+    else:
+        return { 'message': 'User deletion error'}

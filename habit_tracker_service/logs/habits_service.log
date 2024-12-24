@@ -535,3 +535,58 @@
 2024-12-21 11:52:50,200 habits_service INFO Fulfillment is, date: 2024-12-22, habit id: 9, successfully marked
 2024-12-21 11:52:51,677 habits_service INFO Markering the fulfillment of day 2024-12-22, habit id: 9
 2024-12-21 11:52:51,727 habits_service INFO Fulfillment is, date: 2024-12-22, habit id: 9, successfully marked
+2024-12-23 19:27:20,935 habits_service INFO Retrieving all habits of user, id: 1
+2024-12-23 19:27:20,952 habits_service INFO Habits of user, id: 1, successfully retrieved
+2024-12-23 19:27:41,841 habits_service INFO Markering the fulfillment of day 2024-12-23, habit id: 9
+2024-12-23 19:27:41,867 habits_service INFO Creating a new day of habit, id: 9
+2024-12-23 19:27:41,904 habits_service INFO Day of habit, id: 9, successfully created
+2024-12-23 19:27:41,946 habits_service INFO Fulfillment is, date: 2024-12-23, habit id: 9, successfully marked
+2024-12-24 07:16:52,168 habits_service INFO Deleting all habits of user id: 2
+2024-12-24 07:19:37,167 habits_service INFO Deleting all habits of user id: 2
+2024-12-24 10:28:30,177 habits_service INFO Deleting all habits of user id: 1
+2024-12-24 10:31:18,325 habits_service INFO Deleting all habits of user id: 1
+2024-12-24 10:31:47,468 habits_service INFO Deleting all habits of user id: 2
+2024-12-24 10:33:09,577 habits_service INFO Deleting all habits of user id: 2
+2024-12-24 10:34:15,544 habits_service INFO Deleting all habits of user id: 2
+2024-12-24 10:34:32,517 habits_service INFO Deleting all habits of user id: 2
+2024-12-24 10:34:32,518 habits_service INFO Retrieving all habits of user, id: 2
+2024-12-24 10:34:32,528 habits_service INFO Habits of user, id: 2, successfully retrieved
+2024-12-24 10:34:32,578 habits_service INFO Habit of user id: 2, successfully deleted
+2024-12-24 07:38:41,734 habits_service INFO Retrieving all habits of user, id: 3
+2024-12-24 07:38:41,761 habits_service INFO Habits of user, id: 3, successfully retrieved
+2024-12-24 07:38:52,204 habits_service INFO Creating new habit of user, id: 3
+2024-12-24 07:38:52,230 habits_service INFO Creating a new day of habit, id: 10
+2024-12-24 07:38:52,267 habits_service INFO Day of habit, id: 10, successfully created
+2024-12-24 07:38:52,267 habits_service INFO Habit of user, id: 3, successfully created
+2024-12-24 07:38:56,505 habits_service INFO Creating new habit of user, id: 3
+2024-12-24 07:38:56,530 habits_service INFO Creating a new day of habit, id: 11
+2024-12-24 07:38:56,564 habits_service INFO Day of habit, id: 11, successfully created
+2024-12-24 07:38:56,565 habits_service INFO Habit of user, id: 3, successfully created
+2024-12-24 07:38:59,185 habits_service INFO Creating new habit of user, id: 3
+2024-12-24 07:38:59,214 habits_service INFO Creating a new day of habit, id: 12
+2024-12-24 07:38:59,248 habits_service INFO Day of habit, id: 12, successfully created
+2024-12-24 07:38:59,249 habits_service INFO Habit of user, id: 3, successfully created
+2024-12-24 07:39:04,662 habits_service INFO Retrieving all habits of user, id: 3
+2024-12-24 07:39:04,675 habits_service INFO Habits of user, id: 3, successfully retrieved
+2024-12-24 07:39:39,457 habits_service INFO Markering the fulfillment of day 2024-12-24, habit id: 10
+2024-12-24 07:39:39,507 habits_service INFO Fulfillment is, date: 2024-12-24, habit id: 10, successfully marked
+2024-12-24 07:39:47,830 habits_service INFO Markering the fulfillment of day 2024-12-23, habit id: 10
+2024-12-24 07:39:47,853 habits_service INFO Creating a new day of habit, id: 10
+2024-12-24 07:39:47,888 habits_service INFO Day of habit, id: 10, successfully created
+2024-12-24 07:39:47,931 habits_service INFO Fulfillment is, date: 2024-12-23, habit id: 10, successfully marked
+2024-12-24 07:40:01,574 habits_service INFO Deleting all habits of user id: 3
+2024-12-24 07:40:01,575 habits_service INFO Retrieving all habits of user, id: 3
+2024-12-24 07:40:01,593 habits_service INFO Habits of user, id: 3, successfully retrieved
+2024-12-24 07:40:01,743 habits_service INFO Habit of user id: 3, successfully deleted
+2024-12-24 07:40:55,222 habits_service INFO Retrieving all habits of user, id: 3
+2024-12-24 07:40:55,235 habits_service INFO Habits of user, id: 3, successfully retrieved
+2024-12-24 07:42:44,322 habits_service INFO Deleting all habits of user id: 3
+2024-12-24 07:42:44,322 habits_service INFO Retrieving all habits of user, id: 3
+2024-12-24 07:42:44,339 habits_service INFO Habits of user, id: 3, successfully retrieved
+2024-12-24 07:42:44,340 habits_service INFO Habit of user id: 3, successfully deleted
+2024-12-24 07:43:51,667 habits_service INFO Deleting all habits of user id: 2
+2024-12-24 07:43:51,667 habits_service INFO Retrieving all habits of user, id: 2
+2024-12-24 07:43:51,680 habits_service INFO Habits of user, id: 2, successfully retrieved
+2024-12-24 07:43:51,681 habits_service INFO Habit of user id: 2, successfully deleted
+2024-12-24 07:44:47,475 habits_service INFO Retrieving all habits of user, id: 2
+2024-12-24 07:44:47,500 habits_service INFO Habits of user, id: 2, successfully retrieved

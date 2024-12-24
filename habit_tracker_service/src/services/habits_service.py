@@ -127,6 +127,21 @@ class HabitsService(AbstractHabitsService):
         except ValueError as e:
             logger.warning('Habit, id: %d, not found', habit_id)
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
+    
+
+    async def delete_all(self, user_id: int):
+        '''Удаляет все привычки пользователя'''
+        logger.info('Deleting all habits of user id: %d', user_id)
+
+        try:
+            habits: List[HabitsModel] = await self.get_all(user_id)
+            for habit in habits:
+                await self.habits_repository.delete(habit.id)
+
+            logger.info('Habit of user id: %d, successfully deleted', user_id)
+        except ValueError as e:
+            logger.warning('Habit of user id: %d, not found', user_id)
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
 
 
     async def check_for_accessibility_and_get(self, user_id: int, habit_id: int) -> HabitsModel:

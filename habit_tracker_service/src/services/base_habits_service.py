@@ -44,3 +44,8 @@ class AbstractHabitsService(ABC):
     async def delete():
         '''Удаляет привычку'''
         raise NotImplemented
+    
+    @abstractmethod
+    async def delete_all():
+        '''Удаляет все привычки пользователя'''
+        raise NotImplemented

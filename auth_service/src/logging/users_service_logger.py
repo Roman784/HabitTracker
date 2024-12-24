@@ -10,5 +10,5 @@ class UsersServiceLogger(AbstractLogger):
     def __init__(self):
         '''init'''
         module_name = 'user_service'
-        file_path = LogsData.USERS_SERVICE_LOGS_FILE
+        file_path = LogsData.USERS_SERVICE_FILE_PATH
         super().__init__(module_name, file_path)

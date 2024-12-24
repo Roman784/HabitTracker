@@ -1,0 +1,105 @@
+2024-12-24 07:16:52,140 message_broker INFO Broker inited 140250216822400
+2024-12-24 07:16:52,156 message_broker INFO Broker connected 140250216822400
+2024-12-24 07:16:52,156 message_broker INFO Sending a message from 140250216822400 to delete_user_habits_request
+2024-12-24 07:16:52,158 message_broker INFO Message sended from 140250216822400 to delete_user_habits_request
+2024-12-24 07:16:52,158 message_broker INFO Receiving a response from delete_user_habits_request_response to 140250216822400
+2024-12-24 07:16:52,159 message_broker INFO Comsuming 140250216822400
+2024-12-24 07:16:52,269 message_broker INFO Message received from delete_user_habits_request_response to 140250216822400
+2024-12-24 07:16:52,272 message_broker INFO Broker closed 140250216822400
+2024-12-24 07:18:14,696 message_broker INFO Broker inited 140159153536176
+2024-12-24 07:18:14,725 message_broker WARNING Connection error 140159153536176
+2024-12-24 07:18:15,229 message_broker WARNING Connection error 140159153536176
+2024-12-24 07:18:15,732 message_broker WARNING Connection error 140159153536176
+2024-12-24 07:18:16,241 message_broker INFO Broker connected 140159153536176
+2024-12-24 07:18:16,242 message_broker INFO Sending a message from 140159153536176 to delete_user_habits_request
+2024-12-24 07:18:16,243 message_broker INFO Message sended from 140159153536176 to delete_user_habits_request
+2024-12-24 07:18:16,244 message_broker INFO Receiving a response from delete_user_habits_request_response to 140159153536176
+2024-12-24 07:18:16,244 message_broker INFO Comsuming 140159153536176
+2024-12-24 07:19:37,135 message_broker INFO Broker inited 140159153564960
+2024-12-24 07:19:37,148 message_broker INFO Broker connected 140159153564960
+2024-12-24 07:19:37,149 message_broker INFO Sending a message from 140159153564960 to delete_user_habits_request
+2024-12-24 07:19:37,152 message_broker INFO Message sended from 140159153564960 to delete_user_habits_request
+2024-12-24 07:19:37,153 message_broker INFO Receiving a response from delete_user_habits_request_response to 140159153564960
+2024-12-24 07:19:37,153 message_broker INFO Comsuming 140159153564960
+2024-12-24 07:19:37,277 message_broker INFO Message received from delete_user_habits_request_response to 140159153536176
+2024-12-24 07:19:37,280 message_broker INFO Broker closed 140159153536176
+2024-12-24 10:28:30,157 message_broker INFO Broker inited 1934259529024
+2024-12-24 10:28:30,170 message_broker INFO Broker connected 1934259529024
+2024-12-24 10:28:30,170 message_broker INFO Sending a message from 1934259529024 to delete_user_habits_request
+2024-12-24 10:28:30,170 message_broker INFO Message sended from 1934259529024 to delete_user_habits_request
+2024-12-24 10:28:30,170 message_broker INFO Receiving a response from delete_user_habits_request_response to 1934259529024
+2024-12-24 10:28:30,171 message_broker INFO Comsuming 1934259529024
+2024-12-24 10:28:30,270 message_broker INFO Message received from delete_user_habits_request_response to 1934259529024
+2024-12-24 10:28:30,272 message_broker INFO Broker closed 1934259529024
+2024-12-24 10:31:18,308 message_broker INFO Broker inited 1934260252320
+2024-12-24 10:31:18,318 message_broker INFO Broker connected 1934260252320
+2024-12-24 10:31:18,319 message_broker INFO Sending a message from 1934260252320 to delete_user_habits_request
+2024-12-24 10:31:18,319 message_broker INFO Message sended from 1934260252320 to delete_user_habits_request
+2024-12-24 10:31:18,319 message_broker INFO Receiving a response from delete_user_habits_request_response to 1934260252320
+2024-12-24 10:31:18,319 message_broker INFO Comsuming 1934260252320
+2024-12-24 10:31:18,415 message_broker INFO Message received from delete_user_habits_request_response to 1934260252320
+2024-12-24 10:31:18,418 message_broker INFO Broker closed 1934260252320
+2024-12-24 10:31:47,450 message_broker INFO Broker inited 1934262078016
+2024-12-24 10:31:47,459 message_broker INFO Broker connected 1934262078016
+2024-12-24 10:31:47,459 message_broker INFO Sending a message from 1934262078016 to delete_user_habits_request
+2024-12-24 10:31:47,461 message_broker INFO Message sended from 1934262078016 to delete_user_habits_request
+2024-12-24 10:31:47,461 message_broker INFO Receiving a response from delete_user_habits_request_response to 1934262078016
+2024-12-24 10:31:47,461 message_broker INFO Comsuming 1934262078016
+2024-12-24 10:31:47,553 message_broker INFO Message received from delete_user_habits_request_response to 1934262078016
+2024-12-24 10:31:47,555 message_broker INFO Broker closed 1934262078016
+2024-12-24 10:33:09,557 message_broker INFO Broker inited 1934262089536
+2024-12-24 10:33:09,569 message_broker INFO Broker connected 1934262089536
+2024-12-24 10:33:09,569 message_broker INFO Sending a message from 1934262089536 to delete_user_habits_request
+2024-12-24 10:33:09,570 message_broker INFO Message sended from 1934262089536 to delete_user_habits_request
+2024-12-24 10:33:09,570 message_broker INFO Receiving a response from delete_user_habits_request_response to 1934262089536
+2024-12-24 10:33:09,570 message_broker INFO Comsuming 1934262089536
+2024-12-24 10:33:09,682 message_broker INFO Message received from delete_user_habits_request_response to 1934262089536
+2024-12-24 10:33:09,685 message_broker INFO Broker closed 1934262089536
+2024-12-24 10:34:15,519 message_broker INFO Broker inited 1934262090544
+2024-12-24 10:34:15,532 message_broker INFO Broker connected 1934262090544
+2024-12-24 10:34:15,533 message_broker INFO Sending a message from 1934262090544 to delete_user_habits_request
+2024-12-24 10:34:15,535 message_broker INFO Message sended from 1934262090544 to delete_user_habits_request
+2024-12-24 10:34:15,535 message_broker INFO Receiving a response from delete_user_habits_request_response to 1934262090544
+2024-12-24 10:34:15,535 message_broker INFO Comsuming 1934262090544
+2024-12-24 10:34:15,651 message_broker INFO Message received from delete_user_habits_request_response to 1934262090544
+2024-12-24 10:34:15,653 message_broker INFO Broker closed 1934262090544
+2024-12-24 10:34:32,500 message_broker INFO Broker inited 1934262276880
+2024-12-24 10:34:32,508 message_broker INFO Broker connected 1934262276880
+2024-12-24 10:34:32,509 message_broker INFO Sending a message from 1934262276880 to delete_user_habits_request
+2024-12-24 10:34:32,510 message_broker INFO Message sended from 1934262276880 to delete_user_habits_request
+2024-12-24 10:34:32,510 message_broker INFO Receiving a response from delete_user_habits_request_response to 1934262276880
+2024-12-24 10:34:32,510 message_broker INFO Comsuming 1934262276880
+2024-12-24 10:34:32,608 message_broker INFO Message received from delete_user_habits_request_response to 1934262276880
+2024-12-24 10:34:32,610 message_broker INFO Broker closed 1934262276880
+2024-12-24 07:40:01,541 message_broker INFO Broker inited 139973998263712
+2024-12-24 07:40:01,560 message_broker INFO Broker connected 139973998263712
+2024-12-24 07:40:01,561 message_broker INFO Sending a message from 139973998263712 to delete_user_habits_request
+2024-12-24 07:40:01,563 message_broker INFO Message sended from 139973998263712 to delete_user_habits_request
+2024-12-24 07:40:01,563 message_broker INFO Receiving a response from delete_user_habits_request_response to 139973998263712
+2024-12-24 07:40:01,563 message_broker INFO Comsuming 139973998263712
+2024-12-24 07:40:01,774 message_broker INFO Message received from delete_user_habits_request_response to 139973998263712
+2024-12-24 07:40:01,779 message_broker INFO Broker closed 139973998263712
+2024-12-24 07:42:40,272 message_broker INFO Broker inited 140175929048384
+2024-12-24 07:42:40,280 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:40,783 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:41,286 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:41,789 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:42,292 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:42,795 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:43,298 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:43,801 message_broker WARNING Connection error 140175929048384
+2024-12-24 07:42:44,311 message_broker INFO Broker connected 140175929048384
+2024-12-24 07:42:44,311 message_broker INFO Sending a message from 140175929048384 to delete_user_habits_request
+2024-12-24 07:42:44,313 message_broker INFO Message sended from 140175929048384 to delete_user_habits_request
+2024-12-24 07:42:44,314 message_broker INFO Receiving a response from delete_user_habits_request_response to 140175929048384
+2024-12-24 07:42:44,314 message_broker INFO Comsuming 140175929048384
+2024-12-24 07:42:44,422 message_broker INFO Message received from delete_user_habits_request_response to 140175929048384
+2024-12-24 07:42:44,425 message_broker INFO Broker closed 140175929048384
+2024-12-24 07:43:51,646 message_broker INFO Broker inited 140175928121184
+2024-12-24 07:43:51,656 message_broker INFO Broker connected 140175928121184
+2024-12-24 07:43:51,657 message_broker INFO Sending a message from 140175928121184 to delete_user_habits_request
+2024-12-24 07:43:51,658 message_broker INFO Message sended from 140175928121184 to delete_user_habits_request
+2024-12-24 07:43:51,659 message_broker INFO Receiving a response from delete_user_habits_request_response to 140175928121184
+2024-12-24 07:43:51,659 message_broker INFO Comsuming 140175928121184
+2024-12-24 07:43:51,762 message_broker INFO Message received from delete_user_habits_request_response to 140175928121184
+2024-12-24 07:43:51,766 message_broker INFO Broker closed 140175928121184
