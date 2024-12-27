@@ -12,12 +12,12 @@ from src.databse.database import db_session
 
 class SQLAlchemyRepository(AbstractRepository):
     '''Работа с бд через SQLAlchemy'''
-    model: BaseModel = None
+    __model: BaseModel = None
 
     async def create(self, data: dict) -> int:
         '''Создаёт запись в бд и возвращает её id'''
         async with db_session() as session:
-            record: BaseModel = self.model(**data)
+            record: BaseModel = self.__model(**data)
             session.add(record)
             await session.flush()
             await session.commit()
@@ -26,7 +26,7 @@ class SQLAlchemyRepository(AbstractRepository):
     async def get_by(self, filter_by: dict) -> List[BaseModel]:
         '''Возвращает список записей по указанному фильтру'''
         async with db_session() as session:
-            query = select(self.model).filter_by(**filter_by)
+            query = select(self.__model).filter_by(**filter_by)
             result = await session.execute(query)
             return result.scalars().all()
 
