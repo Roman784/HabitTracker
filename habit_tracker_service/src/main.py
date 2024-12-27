@@ -4,7 +4,7 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
-from src.database.database import create_tables, delete_tables
+from src.database.database import create_tables
 from src.api.habits_routes import habits_router
 from src.message_broker.message_brokers import connect_brokers, close_brokers, start_consuming
 
@@ -12,7 +12,6 @@ from src.message_broker.message_brokers import connect_brokers, close_brokers, s
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     '''Жизненный цикл приложения. Обновляет бд'''
-    # await delete_tables()
     await create_tables()
     await connect_brokers()
     await start_consuming()
